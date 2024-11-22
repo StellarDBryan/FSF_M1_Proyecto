@@ -1,13 +1,39 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.14/dist/full.min.css" rel="stylesheet" type="text/css" />
-    <script src="https://cdn.tailwindcss.com"></script>
-</head>
-<body>
-    
-</body>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Travelly</title>
+        <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.14/dist/full.min.css" rel="stylesheet" type="text/css" />
+        <script src="https://cdn.tailwindcss.com"></script>
+        <script>
+            tailwind.config = {
+              theme: {
+                extend: {
+                  colors: {
+                    custom1: '#F2F2F2', 
+                    custom2: '#A6702E', 
+                    custom3: '#401E01',
+                    custom4: '#BF9004', 
+                    custom5: '#8C3F23',
+                  }
+                }
+              }
+            }
+          </script>
+    </head>
+    <body>
+        <header>
+            <nav class="navbar bg-custom1">
+                <a href="/redirectTest.html">
+                    <button class="btn btn-lg btn-ghost">
+                        Logo
+                    </button>
+                </a>
+            </nav>
+        </header>
+        <main>
+
+        </main>
+    </body>
 </html>
