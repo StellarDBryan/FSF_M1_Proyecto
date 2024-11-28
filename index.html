@@ -1,11 +1,96 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    
-</body>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Travelly</title>
+        <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.14/dist/full.min.css" rel="stylesheet" type="text/css" />
+        <script src="https://cdn.tailwindcss.com"></script>
+        <script>
+            tailwind.config = {
+              theme: {
+                extend: {
+                  colors: {
+                    custom1: '#F2F2F2', 
+                    custom2: '#A6702E', 
+                    custom3: '#401E01',
+                    custom4: '#BF9004', 
+                    custom5: '#8C3F23',
+                  }
+                }
+              }
+            }
+          </script>
+    </head>
+    <body>
+        <header class="h-auto w-full">
+            <nav class="navbar fixed z-50 bg-gradient-to-r p-3 h-[5rem] w-full flex items-center justify-between lg:justify-around from-purple-700 to-yellow-300">
+                <a href="/">
+                    <button class="btn btn-lg btn-ghost">
+                        Logo
+                    </button>
+                </a>
+                <div class="h-full w-auto hidden lg:flex flex-row items-center lg:justify-center space-x-5 text-gray-100">
+                    <a href="/redirectTest.html">
+                        <button class="btn bg-inherit text-inherit shadow-none rounded-none border-0 px-4 py-2 text-xl hover:border-b-2 hover:border-custom1 hover:bg-inherit">
+                            Inicio
+                        </button>
+                    </a>
+                    <a href="/redirectTest.html">
+                        <button class="btn bg-inherit text-inherit shadow-none rounded-none border-0 px-4 py-2 text-xl hover:border-b-2 hover:border-custom1 hover:bg-inherit">
+                            Destinos
+                        </button>
+                    </a>
+                    <a href="/redirectTest.html">
+                        <button class="btn bg-inherit text-inherit shadow-none rounded-none border-0 px-4 py-2 text-xl hover:border-b-2 hover:border-custom1 hover:bg-inherit">
+                            Reservar
+                        </button>
+                    </a>
+                    <a href="/redirectTest.html">
+                        <button class="btn bg-inherit text-inherit shadow-none rounded-none border-0 px-4 py-2 text-xl hover:border-b-2 hover:border-custom1 hover:bg-inherit">
+                            Ayuda
+                        </button>
+                    </a>
+                </div>
+                <div class="flex flex-row w-auto lg:space-x-5 items-center justify-center">
+                    <form class="hidden md:flex">
+                        <input type="text" class="input input-bordered text-md lg:text-xl input-warning w-[20vw]" placeholder="Buscar en Travelly..." />
+                    </form>
+                    <div class="hidden w-full h-full lg:flex items-center justify-around">
+                        <div class="avatar">
+                            <div class="w-12 rounded-full ring ring-offset-2 ring-secondary ring-offset-base-100 overflow-hidden">
+                                <img src=" https://unavatar.io/x/kikobeats" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="w-auto h-full px-4 py-2 flex items-center justify-center lg:hidden">
+                        <button class="btn btn-ghost w-auto h-auto">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="2.5rem" height="2.5rem" viewBox="0 0 24 24">
+                                <path fill="currentColor" d="M3 18v-2h18v2zm0-5v-2h18v2zm0-5V6h18v2z"/>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <main class="h-[8000px] bg-gray-300">
+            <section class="object-cover w-full h-screen relative flex flex-col items-center justify-center overflow-hidden">
+                <div class="flex flex-col space-y-5 items-center justify-center bg-transparent h-auto lg:w-1/2 z-20">
+                    <h1 class="text-gray-100 font-bold text-5xl text-center">Experiencias fuera de tu hogar a solo un par de clics</h1>
+                    <p class="text-gray-100 font-medium text-xl text-center w-4/5">Explora los mejores destinos, encuentra las mejores ofertas en vuelos y hospedajes, y planifica tu viaje ideal en minutos. Con Travelly, cada aventura comienza con un clic.</p>
+                    <button class="btn btn-ghost group h-auto w-auto rounded-full text-lg text-gray-100 font-semibold px-6 py-2">
+                        Explorar destinos
+                        <svg xmlns="http://www.w3.org/2000/svg" width="1.5rem" height="1.5rem" viewBox="0 0 24 24" class="transform transition-all ease-in-out duration-150 group-hover:translate-x-2">
+                            <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14m-7-7l7 7l-7 7"/>
+                        </svg>
+                    </button>
+                </div>
+                <div class="absolute h-full w-full bg-neutral-900 z-10">
+                    
+                    <video src="https://cdn.pixabay.com/video/2022/10/19/135658-764361528_large.mp4"
+                        width="100%" height="100%" class="opacity-80" autoplay muted loop />
+                </div>
+            </section>
+        </main>
+    </body>
 </html>
