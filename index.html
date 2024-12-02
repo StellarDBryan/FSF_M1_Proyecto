@@ -9,6 +9,17 @@
         <script>
             tailwind.config = {
               theme: {
+                fontSize: {
+                    h1: '3.815rem', 
+                    h2: '3.052rem', 
+                    h3: '2.441rem', 
+                    h4: '1.953rem', 
+                    h5: '1.563rem', 
+                    h6: '1.25rem', 
+                    p: '1rem', 
+                    sm1: '0.8rem', 
+                    sm2: '0.64rem', 
+                },
                 extend: {
                   colors: {
                     custom1: '#F2F2F2', 
@@ -32,29 +43,29 @@
                 </a>
                 <div class="h-full w-auto hidden lg:flex flex-row items-center lg:justify-center space-x-5 text-gray-100">
                     <a href="/redirectTest.html">
-                        <button class="btn bg-inherit text-inherit shadow-none rounded-none border-0 px-4 py-2 text-xl hover:border-b-2 border-gray-50 hover:border-gray-50 hover:bg-inherit">
+                        <button class="btn bg-inherit text-inherit text-h6 shadow-none rounded-none border-0 px-4 py-2 text-xl hover:border-b-2 border-gray-50 hover:border-gray-50 hover:bg-inherit">
                             Inicio
                         </button>
                     </a>
                     <a href="/redirectTest.html">
-                        <button class="btn bg-inherit text-inherit shadow-none rounded-none border-0 px-4 py-2 text-xl hover:border-b-2 border-gray-50 hover:border-gray-50 hover:bg-inherit">
+                        <button class="btn bg-inherit text-inherit text-h6 shadow-none rounded-none border-0 px-4 py-2 text-xl hover:border-b-2 border-gray-50 hover:border-gray-50 hover:bg-inherit">
                             Destinos
                         </button>
                     </a>
                     <a href="/redirectTest.html">
-                        <button class="btn bg-inherit text-inherit shadow-none rounded-none border-0 px-4 py-2 text-xl hover:border-b-2 border-gray-50 hover:border-gray-50 hover:bg-inherit">
+                        <button class="btn bg-inherit text-inherit text-h6 shadow-none rounded-none border-0 px-4 py-2 text-xl hover:border-b-2 border-gray-50 hover:border-gray-50 hover:bg-inherit">
                             Reservar
                         </button>
                     </a>
                     <a href="/redirectTest.html">
-                        <button class="btn bg-inherit text-inherit shadow-none rounded-none border-0 px-4 py-2 text-xl hover:border-b-2 border-gray-50 hover:border-gray-50 hover:bg-inherit">
+                        <button class="btn bg-inherit text-inherit text-h6 shadow-none rounded-none border-0 px-4 py-2 text-xl hover:border-b-2 border-gray-50 hover:border-gray-50 hover:bg-inherit">
                             Ayuda
                         </button>
                     </a>
                 </div>
                 <div class="flex flex-row w-auto lg:space-x-5 items-center justify-center">
                     <form class="hidden md:flex">
-                        <input type="text" class="input input-bordered text-md lg:text-xl input-warning w-[20vw]" placeholder="Buscar en Travelly..." />
+                        <input type="text" class="input input-bordered text-p lg:text-h6 input-warning w-[20vw]" placeholder="Buscar en Travelly..." />
                     </form>
                     <div class="hidden w-full h-full lg:flex items-center justify-around">
                         <div class="avatar">
@@ -76,9 +87,9 @@
         <main class="h-[8000px] bg-gray-300">
             <section class="object-cover w-full h-screen relative flex flex-col items-center justify-center overflow-hidden object-cover">
                 <div class="flex flex-col space-y-5 items-center justify-center bg-transparent h-auto w-5/6 md:w-3/4 lg:w-1/2 z-20">
-                    <h1 class="text-gray-100 font-bold text-2xl sm:text-3xl md:text-5xl text-center">Experiencias fuera de tu hogar a solo un par de clics</h1>
-                    <p class="text-gray-100 font-medium text-md sm:text-lg lg:text-xl text-center w-11/12 sm:w-4/5">Explora los mejores destinos, encuentra las mejores ofertas en vuelos y hospedajes, y planifica tu viaje ideal en minutos. Con Travelly, cada aventura comienza con un clic.</p>
-                    <button class="btn btn-ghost group h-auto w-auto rounded-full text-lg text-gray-100 font-semibold px-6 py-2">
+                    <h1 class="text-gray-100 font-bold text-h5 sm:text-h4 md:text-h2 text-center">Experiencias fuera de tu hogar a solo un par de clics</h1>
+                    <p class="text-gray-100 font-medium text-p sm:text-h6 text-center w-11/12 sm:w-4/5">Explora los mejores destinos, encuentra las mejores ofertas en vuelos y hospedajes, y planifica tu viaje ideal en minutos. Con Travelly, cada aventura comienza con un clic.</p>
+                    <button class="btn btn-ghost group h-auto w-auto rounded-full text-h6 text-gray-100 font-semibold px-6 py-2">
                         Explorar destinos
                         <svg xmlns="http://www.w3.org/2000/svg" width="1.5rem" height="1.5rem" viewBox="0 0 24 24" class="transform transition-all ease-in-out duration-150 group-hover:translate-x-2">
                             <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14m-7-7l7 7l-7 7"/>
