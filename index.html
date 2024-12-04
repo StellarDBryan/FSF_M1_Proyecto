@@ -9,13 +9,20 @@
         <script>
             tailwind.config = {
               theme: {
+                fontSize: {
+                    h1: '3.815rem', 
+                    h2: '3.052rem', 
+                    h3: '2.441rem', 
+                    h4: '1.953rem', 
+                    h5: '1.563rem', 
+                    h6: '1.25rem', 
+                    p: '1rem', 
+                    sm1: '0.8rem', 
+                    sm2: '0.64rem', 
+                },
                 extend: {
                   colors: {
-                    custom1: '#F2F2F2', 
-                    custom2: '#A6702E', 
-                    custom3: '#401E01',
-                    custom4: '#BF9004', 
-                    custom5: '#8C3F23',
+                    purple1: '#240046', 
                   }
                 }
               }
@@ -24,37 +31,37 @@
     </head>
     <body>
         <header class="h-auto w-full">
-            <nav class="navbar fixed z-50 bg-gradient-to-r p-3 h-[5rem] w-full flex items-center justify-between lg:justify-around from-purple-700 to-yellow-300">
-                <a href="/">
-                    <button class="btn btn-lg btn-ghost">
-                        Logo
-                    </button>
+            <nav class="navbar fixed z-50 drop-shadow-2xl bg-gradient-to-r p-3 h-[5vh] sm:h-[5rem] w-full flex items-center justify-between lg:justify-around from-purple-900 to-yellow-300">
+                <a href="/" class="group">
+                    <img src="https://dewey.tailorbrands.com/production/brand_version_mockup_image/707/9177902707_0e369c2b-b0bb-40c5-9978-ee529c1f9667.png?cb=1733262568" 
+                        class="w-[8vw] h-[8vh] object-contain transform group-hover:scale-90 transition ease-in-out duration-200"
+                    />
                 </a>
                 <div class="h-full w-auto hidden lg:flex flex-row items-center lg:justify-center space-x-5 text-gray-100">
                     <a href="/redirectTest.html">
-                        <button class="btn bg-inherit text-inherit shadow-none rounded-none border-0 px-4 py-2 text-xl hover:border-b-2 hover:border-custom1 hover:bg-inherit">
+                        <button class="btn bg-inherit text-inherit text-h6 shadow-none rounded-none border-0 px-4 py-2 text-xl hover:border-b-2 border-gray-50 hover:border-gray-50 hover:bg-inherit">
                             Inicio
                         </button>
                     </a>
                     <a href="/redirectTest.html">
-                        <button class="btn bg-inherit text-inherit shadow-none rounded-none border-0 px-4 py-2 text-xl hover:border-b-2 hover:border-custom1 hover:bg-inherit">
+                        <button class="btn bg-inherit text-inherit text-h6 shadow-none rounded-none border-0 px-4 py-2 text-xl hover:border-b-2 border-gray-50 hover:border-gray-50 hover:bg-inherit">
                             Destinos
                         </button>
                     </a>
                     <a href="/redirectTest.html">
-                        <button class="btn bg-inherit text-inherit shadow-none rounded-none border-0 px-4 py-2 text-xl hover:border-b-2 hover:border-custom1 hover:bg-inherit">
+                        <button class="btn bg-inherit text-inherit text-h6 shadow-none rounded-none border-0 px-4 py-2 text-xl hover:border-b-2 border-gray-50 hover:border-gray-50 hover:bg-inherit">
                             Reservar
                         </button>
                     </a>
                     <a href="/redirectTest.html">
-                        <button class="btn bg-inherit text-inherit shadow-none rounded-none border-0 px-4 py-2 text-xl hover:border-b-2 hover:border-custom1 hover:bg-inherit">
+                        <button class="btn bg-inherit text-inherit text-h6 shadow-none rounded-none border-0 px-4 py-2 text-xl hover:border-b-2 border-gray-50 hover:border-gray-50 hover:bg-inherit">
                             Ayuda
                         </button>
                     </a>
                 </div>
                 <div class="flex flex-row w-auto lg:space-x-5 items-center justify-center">
                     <form class="hidden md:flex">
-                        <input type="text" class="input input-bordered text-md lg:text-xl input-warning w-[20vw]" placeholder="Buscar en Travelly..." />
+                        <input type="text" class="input input-bordered text-p lg:text-h6 input-warning w-[20vw]" placeholder="Buscar en Travelly..." />
                     </form>
                     <div class="hidden w-full h-full lg:flex items-center justify-around">
                         <div class="avatar">
@@ -63,9 +70,9 @@
                             </div>
                         </div>
                     </div>
-                    <div class="w-auto h-full px-4 py-2 flex items-center justify-center lg:hidden">
+                    <div class="w-auto h-full text-neutral-900 transform scale-75 sm:scale-100 px-4 py-2 object-contain flex items-center justify-center lg:hidden">
                         <button class="btn btn-ghost w-auto h-auto">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="2.5rem" height="2.5rem" viewBox="0 0 24 24">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="2.5rem" height="2.5rem" viewBox="0 0 24 24" class="w-full h-full">
                                 <path fill="currentColor" d="M3 18v-2h18v2zm0-5v-2h18v2zm0-5V6h18v2z"/>
                             </svg>
                         </button>
@@ -73,12 +80,12 @@
                 </div>
             </nav>
         </header>
-        <main class="h-[8000px] bg-gray-300">
-            <section class="object-cover w-full h-screen relative flex flex-col items-center justify-center overflow-hidden">
-                <div class="flex flex-col space-y-5 items-center justify-center bg-transparent h-auto lg:w-1/2 z-20">
-                    <h1 class="text-gray-100 font-bold text-5xl text-center">Experiencias fuera de tu hogar a solo un par de clics</h1>
-                    <p class="text-gray-100 font-medium text-xl text-center w-4/5">Explora los mejores destinos, encuentra las mejores ofertas en vuelos y hospedajes, y planifica tu viaje ideal en minutos. Con Travelly, cada aventura comienza con un clic.</p>
-                    <button class="btn btn-ghost group h-auto w-auto rounded-full text-lg text-gray-100 font-semibold px-6 py-2">
+        <main class="h-auto bg-neutral-500">
+            <section class="object-cover w-full h-screen relative flex flex-col items-center justify-center overflow-hidden object-cover">
+                <div class="flex flex-col space-y-5 items-center justify-center bg-transparent h-auto w-5/6 md:w-3/4 lg:w-1/2 z-20">
+                    <h1 class="text-gray-100 font-bold text-h5 sm:text-h4 md:text-h2 text-center">Experiencias fuera de tu hogar a solo un par de clics</h1>
+                    <p class="text-gray-100 font-medium text-p sm:text-h6 text-center w-11/12 sm:w-4/5">Explora los mejores destinos, encuentra las mejores ofertas en vuelos y hospedajes, y planifica tu viaje ideal en minutos. Con Travelly, cada aventura comienza con un clic.</p>
+                    <button class="btn btn-ghost group h-auto w-auto rounded-full text-h6 text-gray-100 font-semibold px-6 py-2">
                         Explorar destinos
                         <svg xmlns="http://www.w3.org/2000/svg" width="1.5rem" height="1.5rem" viewBox="0 0 24 24" class="transform transition-all ease-in-out duration-150 group-hover:translate-x-2">
                             <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14m-7-7l7 7l-7 7"/>
@@ -86,11 +93,320 @@
                     </button>
                 </div>
                 <div class="absolute h-full w-full bg-neutral-900 z-10">
-                    
-                    <video src="https://cdn.pixabay.com/video/2022/10/19/135658-764361528_large.mp4"
-                        width="100%" height="100%" class="opacity-80" autoplay muted loop />
+                    <video src="https://cdn.pixabay.com/video/2022/10/19/135658-764361528_large.mp4#t=3"
+                        width="100%" height="100%" class="opacity-50 md:opacity-60 w-full h-full object-cover" autoplay muted loop />
                 </div>
+            </section>
+            <section class="lg:w-full space-y-2 sm:space-y-3 bg-gradient-to-b from-neutral-900 to-purple1 to-20% py-5 flex flex-col items-center justify-content">               
+                <h2 class="md:w-3/4 text-h6 md:text-h4 lg:text-h3 text-center font-semibold text-gray-100">Da el primer paso con destinos populares entre nuestros usuarios</h2>
+                <div class="carousel carousel-center bg-inherit rounded-box w-4/5 space-x-4 p-4 shadow-inner">
+                    <a href="/destinations.html" class="w-auto h-full rounded-box">
+                        <div class="carousel-item w-[50vw] h-[45vh] sm:w-[35vw] md:w-[30vw] md:h-[45vh] lg:w-[20vw] lg:h-[54vh] relative overflow-hidden rounded-box flex flex-col justify-end">
+                            <img
+                                src="https://img.freepik.com/foto-gratis/amigas-hermosas-mujeres-pasar-tiempo-juntos_23-2149151062.jpg?t=st=1733127096~exp=1733130696~hmac=93ab3a24cb3fcaf149f0c645c264ca6f7fc068d548c15fec0c04df00ede823b7&w=360"
+                                class="absolute h-full w-full object-cover transform transition-all hover:scale-125 ease-in-out duration-200" />
+                            <div class="z-10 flex flex-col justify-center items-start p-5 w-full h-[25%] bg-gradient-to-t from-gray-950 text-gray-100">
+                                <h6 class="text-p sm:text-h5 font-semibold">París, Francia</h6>
+                                <p class="text-sm1 sm:text-p ">El romance está en el aire</p>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="/destinations.html" class="w-auto h-full rounded-box">
+                        <div class="carousel-item w-[50vw] h-[45vh] sm:w-[35vw] md:w-[30vw] md:h-[45vh] lg:w-[20vw] lg:h-[54vh] relative overflow-hidden rounded-box flex flex-col justify-end">
+                            <img
+                                src="https://img.freepik.com/foto-gratis/gente-caminando-calle-japon-noche_23-2148942945.jpg?t=st=1733180763~exp=1733184363~hmac=2b0c074d5f82fe1eddc82b146d95ccf58772e81dc0c4306ba5dbce09625d036e&w=996"
+                               class="absolute h-full w-full object-cover transform transition-all hover:scale-125 ease-in-out duration-200" />
+                            <div class="z-10 flex flex-col justify-center items-start p-5 w-full h-[25%] bg-gradient-to-t from-gray-950 text-gray-100">
+                                <h6 class="text-p sm:text-h5 font-semibold">Tokio, Japón</h6>
+                                <p class="text-sm1 sm:text-p">Donde lo futurista y lo tradicional se encuentran</p>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="/destinations.html" class="w-auto h-full rounded-box">
+                        <div class="carousel-item w-[50vw] h-[45vh] sm:w-[35vw] md:w-[30vw] md:h-[45vh] lg:w-[20vw] lg:h-[54vh] relative overflow-hidden rounded-box flex flex-col justify-end">
+                            <img
+                                src="https://img.freepik.com/foto-gratis/manhattan-skyline_649448-1559.jpg?t=st=1733181169~exp=1733184769~hmac=1939f1125974b743b98d69325210334e251e83126020d6432e104dc6feac4874&w=996"
+                                class="absolute h-full w-full object-cover transform transition-all hover:scale-125 ease-in-out duration-200" />
+                            <div class="z-10 flex flex-col justify-center items-start p-5 w-full h-[25%] bg-gradient-to-t from-gray-950 text-gray-100">
+                                <h6 class="text-p sm:text-h5 font-semibold">New York, USA</h6>
+                                <p class="text-sm1 sm:text-p ">La ciudad que nunca duerme</p>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="/destinations.html" class="w-auto h-full rounded-box">
+                        <div class="carousel-item w-[50vw] h-[45vh] sm:w-[35vw] md:w-[30vw] md:h-[45vh] lg:w-[20vw] lg:h-[54vh] relative overflow-hidden rounded-box flex flex-col justify-end">
+                            <img
+                                src="https://img.freepik.com/foto-gratis/dos-personas-pie-cerca-coliseo-roma_1304-4858.jpg?t=st=1733183019~exp=1733186619~hmac=ad66bf1068391eeabc1807ffb68b73c908898988198260035c3f296e3e69e9dd&w=996"    
+                                class="absolute h-full w-full object-cover transform transition-all hover:scale-125 ease-in-out duration-200" />
+                            <div class="z-10 flex flex-col justify-center items-start p-5 w-full h-[25%] bg-gradient-to-t from-gray-950 text-gray-100">
+                                <h6 class="text-p sm:text-h5 font-semibold">Roma, Italia</h6>
+                                <p class="text-sm1 sm:text-p ">Historia eterna en cada rincón</p>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="/destinations.html" class="w-auto h-full rounded-box">
+                        <div class="carousel-item w-[50vw] h-[45vh] sm:w-[35vw] md:w-[30vw] md:h-[45vh] lg:w-[20vw] lg:h-[54vh] relative overflow-hidden rounded-box flex flex-col justify-end">
+                            <img
+                                src="https://img.freepik.com/foto-gratis/templo-wat-arun-bangkok-tailandia_335224-972.jpg?t=st=1733183369~exp=1733186969~hmac=ef98ac854a4ddab52ba5176982eaadfe0611c8b08720f840451e86a6d699304c&w=996"
+                                class="absolute h-full w-full object-cover transform transition-all hover:scale-125 ease-in-out duration-200" />
+                            <div class="z-10 flex flex-col justify-center items-start p-5 w-full h-[25%] bg-gradient-to-t from-gray-950 text-gray-100">
+                                <h6 class="text-p sm:text-h5 font-semibold">Bangkok, Tailandia</h6>
+                                <p class="text-sm1 sm:text-p ">Un paraíso de templos y sabores</p>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="/destinations.html" class="w-auto h-full rounded-box">
+                        <div class="carousel-item w-[50vw] h-[45vh] sm:w-[35vw] md:w-[30vw] md:h-[45vh] lg:w-[20vw] lg:h-[54vh] relative overflow-hidden rounded-box flex flex-col justify-end">
+                            <img
+                                src="https://img.freepik.com/foto-gratis/hermosa-foto-puente-puerto-sydney-cielo-azul-rosa-claro_181624-16041.jpg?t=st=1733183533~exp=1733187133~hmac=3f01408cc002f513197afd2979eb85bcc9aad65437805a0ffd270fbecf23c30f&w=996"
+                                class="absolute h-full w-full object-cover transform transition-all hover:scale-125 ease-in-out duration-200" />
+                            <div class="z-10 flex flex-col justify-center items-start p-5 w-full h-[25%] bg-gradient-to-t from-gray-950 text-gray-100">
+                                <h6 class="text-p sm:text-h5 font-semibold">Sídney, Australia</h6>
+                                <p class="text-sm1 sm:text-p ">Sol, surf y el icónico estilo de vida australiano</p>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="/destinations.html" class="w-auto h-full rounded-box">
+                        <div class="carousel-item w-[50vw] h-[45vh] sm:w-[35vw] md:w-[30vw] md:h-[45vh] lg:w-[20vw] lg:h-[54vh] relative overflow-hidden rounded-box flex flex-col justify-end">
+                            <img
+                                src="https://img.freepik.com/foto-gratis/puerta-oriente-lago-jinji_1359-583.jpg?t=st=1733183843~exp=1733187443~hmac=d08ae512c42b2f53ec2e70a40a51dc6b78d804f3f306d81e0190e7da2963c8d0&w=360"
+                                class="absolute h-full w-full object-cover transform transition-all hover:scale-125 ease-in-out duration-200" />
+                            <div class="z-10 flex flex-col justify-center items-start p-5 w-full h-[25%] bg-gradient-to-t from-gray-950 text-gray-100">
+                                <h6 class="text-p sm:text-h5 font-semibold">Dubai, EAU</h6>
+                                <p class="text-sm1 sm:text-p ">Lujo en el corazón del desierto</p>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="/destinations.html" class="w-auto h-full rounded-box">
+                        <div class="carousel-item w-[50vw] h-[45vh] sm:w-[35vw] md:w-[30vw] md:h-[45vh] lg:w-[20vw] lg:h-[54vh] relative overflow-hidden rounded-box flex flex-col justify-end">
+                            <img
+                                src="https://img.freepik.com/foto-gratis/ciudad-barcelona-sagrada-familia-espana_1398-4089.jpg?t=st=1733183979~exp=1733187579~hmac=02077af9d69fd62bc156073221b75769e6f59a32a8a790a4a100ba5624a11495&w=740"
+                                class="absolute h-full w-full object-cover transform transition-all hover:scale-125 ease-in-out duration-200" />
+                            <div class="z-10 flex flex-col justify-center items-start p-5 w-full h-[25%] bg-gradient-to-t from-gray-950 text-gray-100">
+                                <h6 class="text-p sm:text-h5 font-semibold">Barcelona, España</h6>
+                                <p class="text-sm1 sm:text-p ">Arte, sol y pasión mediterránea</p>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="/destinations.html" class="w-auto h-full rounded-box">
+                        <div class="carousel-item w-[50vw] h-[45vh] sm:w-[35vw] md:w-[30vw] md:h-[45vh] lg:w-[20vw] lg:h-[54vh] relative overflow-hidden rounded-box flex flex-col justify-end">
+                            <img
+                                src="https://img.freepik.com/foto-gratis/pura-ulun-danu-bratan-bali-templo-hindu-rodeado-flores-lago-bratan_158538-15793.jpg?t=st=1733184146~exp=1733187746~hmac=57e9635d9bc466baf81dcac4d82607ef7c9ee31b46dc10dbd1e33ae0a0b583d0&w=996"
+                                class="absolute h-full w-full object-cover transform transition-all hover:scale-125 ease-in-out duration-200" />
+                            <div class="z-10 flex flex-col justify-center items-start p-5 w-full h-[25%] bg-gradient-to-t from-gray-950 text-gray-100">
+                                <h6 class="text-p sm:text-h5 font-semibold">Bali, Indonesia</h6>
+                                <p class="text-sm1 sm:text-p ">Tu escape al paraíso</p>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="/destinations.html" class="w-auto h-full rounded-box">
+                        <div class="carousel-item w-[50vw] h-[45vh] sm:w-[35vw] md:w-[30vw] md:h-[45vh] lg:w-[20vw] lg:h-[54vh] relative overflow-hidden rounded-box flex flex-col justify-end">
+                            <img
+                                src="https://img.freepik.com/foto-gratis/famosa-vista-big-ben-casas-parlamento-londres-reino-unido_268835-1111.jpg?t=st=1733184247~exp=1733187847~hmac=328cb751faa585265c626fc3a6b4d83031678bf80c74160726639d705df49cdc&w=996"
+                                class="absolute h-full w-full object-cover transform transition-all hover:scale-125 ease-in-out duration-200" />
+                            <div class="z-10 flex flex-col justify-center items-start p-5 w-full h-[25%] bg-gradient-to-t from-gray-950 text-gray-100">
+                                <h6 class="text-p sm:text-h5 font-semibold">Londres, Inglaterra</h6>
+                                <p class="text-sm1 sm:text-p ">La cuna de la elegancia y la historia</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <button class="btn group btn-ghost hover:bg-purple-900 hover:bg-opacity-60 py-2 px-6 w-auto rounded-full text-p sm:text-h6 font-medium text-gray-100">
+                    <a href="/destinations.html" class="w-auto h-auto flex items-center justify-center space-x-2">
+                        <p>Ver más</p>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="1.5rem" height="1.5rem" viewBox="0 0 24 24" class="transform transition-all ease-in-out duration-150 group-hover:translate-x-2">
+                            <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14m-7-7l7 7l-7 7"/>
+                        </svg>
+                    </a>
+                </button>
+            </section>
+            <section id="Sales" class="w-full"> 
+                <div class="relative isolate space-y-3 bg-gradient-to-b from-purple1 to-yellow-300 px-6 py-24 sm:py-32 lg:px-8">
+                    <div class="absolute inset-x-0 -top-3 -z-10 transform-gpu overflow-hidden px-36 blur-3xl" aria-hidden="true">
+                      <div class="mx-auto aspect-[1155/678] w-[72.1875rem] bg-gradient-to-tr from-[#ff80b5] to-[#9089fc] opacity-30" style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)"></div>
+                    </div>
+                    <div class="mx-auto max-w-4xl text-center">
+                      <h2 class="text-h4 md:text-h3 font-bold text-gray-100">Viaja más, paga menos: ofertas únicas de invierno.</h2>
+                      <p class=" text-balance text-h6 font-medium tracking-tight text-gray-100 sm:text-h5">Desde ciudades nevadas hasta playas cálidas, ¡elige tu aventura!</p>
+                    </div>
+                    <p class="mx-auto max-w-2xl text-pretty text-center text-p  text-gray-100 sm:text-h6">
+                        No dejes pasar estas ofertas diseñadas para que vivas la temporada al máximo según tus preferencias.</p>
+                    <div class="mx-auto mt-16 grid max-w-lg grid-cols-1 items-center space-x-5 gap-y-6 sm:mt-20 sm:gap-y-0 lg:max-w-4xl lg:grid-cols-2">
+                      <div class="relative overflow-hidden rounded-3xl space-y-5 bg-neutral-900/60 p-8 ring-1 shadow-2xl ring-gray-900/10 sm:mx-8 sm:p-10 lg:mx-0">
+                        <img 
+                            src="https://img.freepik.com/foto-gratis/hombre-vestido-santa-claus-celebrando-navidad-julio_23-2149488381.jpg?t=st=1733200216~exp=1733203816~hmac=fbec54275d76192a930666576bbe2e457ddb54739f6bb642188f0e737fb81631&w=360"
+                            class="absolute inset-0 -z-10 object-cover w-full h-full"
+                            />
+                        <h3 id="tier-hobby" class="text-h5 font-bold text-yellow-100">¡Escápate al Caribe!</h3>
+                        <p class="mt-4 flex items-baseline gap-x-2">
+                          <span class="text-h4 font-bold tracking-tight text-white">40%</span>
+                          <span class="text-h4 font-bold text-gray-100"> de descuento</span>
+                        </p>
+                        <p class="mt-6 text-base/7 text-gray-200 font-semibold">Relájate bajo el sol y disfruta del mar cristalino.</p>
+                        <ul role="list" class="mt-8 space-y-3 text-sm/6 text-gray-200 font-semibold sm:mt-10">
+                          <li class="flex gap-x-3">
+                            <svg class="h-6 w-5 flex-none text-yellow-100" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" data-slot="icon">
+                              <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 0 1 .143 1.052l-8 10.5a.75.75 0 0 1-1.127.075l-4.5-4.5a.75.75 0 0 1 1.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 0 1 1.05-.143Z" clip-rule="evenodd" />
+                            </svg>
+                            Estadías frente al mar.
+                          </li>
+                          <li class="flex gap-x-3">
+                            <svg class="h-6 w-5 flex-none text-yellow-100" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" data-slot="icon">
+                              <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 0 1 .143 1.052l-8 10.5a.75.75 0 0 1-1.127.075l-4.5-4.5a.75.75 0 0 1 1.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 0 1 1.05-.143Z" clip-rule="evenodd" />
+                            </svg>
+                            Actividades acuáticas (snorkel, paddleboarding).
+                          </li>
+                          <li class="flex gap-x-3">
+                            <svg class="h-6 w-5 flex-none text-yellow-100" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" data-slot="icon">
+                              <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 0 1 .143 1.052l-8 10.5a.75.75 0 0 1-1.127.075l-4.5-4.5a.75.75 0 0 1 1.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 0 1 1.05-.143Z" clip-rule="evenodd" />
+                            </svg>
+                            Comidas y bebidas incluidas.
+                          </li>
+                          <li class="flex gap-x-3">
+                            <svg class="h-6 w-5 flex-none text-yellow-100" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" data-slot="icon">
+                              <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 0 1 .143 1.052l-8 10.5a.75.75 0 0 1-1.127.075l-4.5-4.5a.75.75 0 0 1 1.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 0 1 1.05-.143Z" clip-rule="evenodd" />
+                            </svg>
+                            Transporte al aeropuerto.
+                          </li>
+                          <li class="flex gap-x-3">
+                            <svg class="h-6 w-5 flex-none text-yellow-100" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" data-slot="icon">
+                              <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 0 1 .143 1.052l-8 10.5a.75.75 0 0 1-1.127.075l-4.5-4.5a.75.75 0 0 1 1.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 0 1 1.05-.143Z" clip-rule="evenodd" />
+                            </svg>
+                            Descuento especial en tours locales.
+                          </li>
+                        </ul>
+                        <a href="#" aria-describedby="tier-hobby" class="">
+                            <button class="btn group rounded-full btn-ghost w-full px-6 py-2 text-p md:text-h6 font-medium text-yellow-100 lg:my-5">
+                                Aprovecha esta oferta exclusiva
+                                <svg xmlns="http://www.w3.org/2000/svg" width="1.5rem" height="1.5rem" viewBox="0 0 24 24" class="transform transition-all ease-in-out duration-150 group-hover:translate-x-2">
+                                    <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14m-7-7l7 7l-7 7"/>
+                                </svg>
+                            </button>
+                        </a>
+                      </div>
+                      <div class="relative overflow-hidden space-y-5 rounded-3xl bg-neutral-900 bg-opacity-60 p-8 shadow-2xl ring-1 ring-gray-900/10 sm:p-10">
+                        <img 
+                            src="https://img.freepik.com/foto-gratis/amigos-nieve_1098-21426.jpg?t=st=1733199742~exp=1733203342~hmac=ab615018ca2180c4aac8674472ddcc83b88cf300a65a87632cddcc44176c38f9&w=996"
+                            class="absolute inset-0 -z-10 object-cover w-full h-full"
+                            />
+                        <h3 id="tier-enterprise" class="text-h5 font-bold text-purple-200">Vive un Invierno Mágico</h3>
+                        <p class="mt-4 flex items-baseline gap-x-2">
+                          <span class="text-h4 font-bold tracking-tight text-white">10%</span>
+                          <span class="text-h4 font-bold text-gray-100">de descuento</span>
+                        </p>
+                        <p class="mt-6 text-base/7 text-gray-200 font-medium">Explora paisajes nevados y vive aventuras invernales.</p>
+                        <ul role="list" class="mt-8 space-y-3 text-sm/6 text-gray-200 font-medium sm:mt-10">
+                          <li class="flex gap-x-3">
+                            <svg class="h-6 w-5 flex-none text-purple-200" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" data-slot="icon">
+                              <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 0 1 .143 1.052l-8 10.5a.75.75 0 0 1-1.127.075l-4.5-4.5a.75.75 0 0 1 1.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 0 1 1.05-.143Z" clip-rule="evenodd" />
+                            </svg>
+                            Hospedaje en cabañas acogedoras.
+                          </li>
+                          <li class="flex gap-x-3">
+                            <svg class="h-6 w-5 flex-none text-purple-200" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" data-slot="icon">
+                              <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 0 1 .143 1.052l-8 10.5a.75.75 0 0 1-1.127.075l-4.5-4.5a.75.75 0 0 1 1.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 0 1 1.05-.143Z" clip-rule="evenodd" />
+                            </svg>
+                            Tours a paisajes nevados.
+                          </li>
+                          <li class="flex gap-x-3">
+                            <svg class="h-6 w-5 flex-none text-purple-200" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" data-slot="icon">
+                              <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 0 1 .143 1.052l-8 10.5a.75.75 0 0 1-1.127.075l-4.5-4.5a.75.75 0 0 1 1.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 0 1 1.05-.143Z" clip-rule="evenodd" />
+                            </svg>
+                            Clases de esquí o snowboard.
+                          </li>
+                          <li class="flex gap-x-3">
+                            <svg class="h-6 w-5 flex-none text-purple-200" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" data-slot="icon">
+                              <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 0 1 .143 1.052l-8 10.5a.75.75 0 0 1-1.127.075l-4.5-4.5a.75.75 0 0 1 1.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 0 1 1.05-.143Z" clip-rule="evenodd" />
+                            </svg>
+                            Hoteles con spa y sauna incluidos.
+                          </li>
+                          <li class="flex gap-x-3">
+                            <svg class="h-6 w-5 flex-none text-purple-200" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" data-slot="icon">
+                              <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 0 1 .143 1.052l-8 10.5a.75.75 0 0 1-1.127.075l-4.5-4.5a.75.75 0 0 1 1.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 0 1 1.05-.143Z" clip-rule="evenodd" />
+                            </svg>
+                            Experiencias únicas como paseos en trineo.
+                          </li>
+                        </ul>
+                        <a href="#" aria-describedby="tier-hobby" class="">
+                            <button class="btn group rounded-full btn-ghost w-full px-6 py-2 text-p md:text-h6 font-medium text-purple-200 lg:my-5">
+                                Reserva tu aventura ahora
+                                <svg xmlns="http://www.w3.org/2000/svg" width="1.5rem" height="1.5rem" viewBox="0 0 24 24" class="transform transition-all ease-in-out duration-150 group-hover:translate-x-2">
+                                    <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14m-7-7l7 7l-7 7"/>
+                                </svg>
+                            </button>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
             </section>
         </main>
     </body>
+    <footer class="footer bg-gradient-to-b from-purple-800 shadow-2xl to-purple1 text-gray-100 p-10 flex flex-row flex-wrap justify-center">
+        <aside>
+          <img src="https://dewey.tailorbrands.com/production/brand_version_mockup_image/707/9177902707_0e369c2b-b0bb-40c5-9978-ee529c1f9667.png?cb=1733262568" 
+            class="w-[45vw] sm:w-[25vw] lg:w-[13vw] lg:h-[13vh] object-contain"
+          />
+          <p>
+            Hacemos cada viaje inolvidable 
+            <br />
+            © TravellyMX. All rights reserved by StellarDBryan. 
+          </p>
+        </aside>
+        <nav class="-space-y-1">
+          <h6 class="footer-title text-purple-100">Contacto</h6>
+          <p><strong>Dirección:</strong> 3701, Edificio 18B, Complejo Industrial las Américas, Chihuahua, Chih.</p>
+          <p><strong>Teléfono:</strong> +52 (614) 567-8901</p>
+          <p><strong>Email:</strong> contact@travelly.com</p>
+        </nav>
+        <nav>
+          <h6 class="footer-title text-purple-100">Links</h6>
+          <a href="/destinations/index.html" class="link link-hover">Destinos</a>
+          <a href="/reservations/index.html" class="link link-hover">Reservar</a>
+          <a href="/index.html#Sales" class="link link-hover">Ofertas</a>
+          <a href="/about/index.html" class="link link-hover">Nosotros</a>
+        </nav>
+        <nav>
+          <h6 class="footer-title text-purple-100">Legal</h6>
+          <a href="#" class="link link-hover">Terminos y condiciones</a>
+          <a href="#" class="link link-hover">Política de Privacidad</a>
+          <a href="#" class="link link-hover">Uso de cookies</a>
+        </nav>
+        <nav class="flex flex-col items-center">
+            <h6 class="footer-title text-purple-100">Redes sociales</h6>
+            <div class="flex flex-row">
+                <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer">
+                    <button class="btn btn-ghost btn-circle hover:bg-purple-700 p-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="2rem" height="2rem" viewBox="0 0 24 24">
+                            <path fill="currentColor" 
+                                d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8 9.8V15H8v-3h2V9.5C10 7.57 11.57 6 13.5 6H16v3h-2c-.55 0-1 .45-1 1v2h3v3h-3v6.95c5.05-.5 9-4.76 9-9.95"/>
+                        </svg>
+                    </button>
+                </a>
+                <a href="https://x.com/BSigala16" target="_blank" rel="noopener noreferrer" >
+                    <button class="btn btn-ghost btn-circle hover:bg-purple-700">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="2rem" height="2rem" viewBox="0 0 24 24">
+                            <path fill="currentColor" 
+                                d="m17.687 3.063l-4.996 5.711l-4.32-5.711H2.112l7.477 9.776l-7.086 8.099h3.034l5.469-6.25l4.78 6.25h6.102l-7.794-10.304l6.625-7.571zm-1.064 16.06L5.654 4.782h1.803l10.846 14.34z"/>
+                        </svg>
+                    </button>
+                </a>
+                <a href="https://www.instagram.com/aaronsj16/profilecard/?igsh=a3Bnc2R3czA5MWM3" target="_blank" rel="noopener noreferrer" >
+                    <button class="btn btn-ghost btn-circle hover:bg-purple-700">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="2rem" height="2rem" viewBox="0 0 24 24">
+                            <path fill="currentColor" 
+                                d="M7.8 2h8.4C19.4 2 22 4.6 22 7.8v8.4a5.8 5.8 0 0 1-5.8 5.8H7.8C4.6 22 2 19.4 2 16.2V7.8A5.8 5.8 0 0 1 7.8 2m-.2 2A3.6 3.6 0 0 0 4 7.6v8.8C4 18.39 5.61 20 7.6 20h8.8a3.6 3.6 0 0 0 3.6-3.6V7.6C20 5.61 18.39 4 16.4 4zm9.65 1.5a1.25 1.25 0 0 1 1.25 1.25A1.25 1.25 0 0 1 17.25 8A1.25 1.25 0 0 1 16 6.75a1.25 1.25 0 0 1 1.25-1.25M12 7a5 5 0 0 1 5 5a5 5 0 0 1-5 5a5 5 0 0 1-5-5a5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3a3 3 0 0 0 3 3a3 3 0 0 0 3-3a3 3 0 0 0-3-3"/>
+                        </svg>
+                    </button>
+                </a>
+                <a href="https://www.linkedin.com/in/bryan-sigala/" target="_blank" rel="noopener noreferrer" >
+                    <button class="btn btn-ghost btn-circle hover:bg-purple-700">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="2rem" height="2rem" viewBox="0 0 24 24">
+                            <path fill="currentColor" 
+                                d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2zm-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93zM6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37z"/>
+                        </svg>
+                    </button>
+                </a>
+            </div>
+          </nav>
+      </footer>
 </html>
