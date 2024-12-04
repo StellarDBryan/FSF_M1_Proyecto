@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>TravellyMX</title>
+        <link rel="icon" type="image/png" sizes="16x16" href="https://dewey.tailorbrands.com/production/brand_version_mockup_image/707/9177902707_0e369c2b-b0bb-40c5-9978-ee529c1f9667.png?cb=1733262568">
+        <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.14/dist/full.min.css" rel="stylesheet" type="text/css" />
+        <script src="https://cdn.tailwindcss.com"></script>
+        <script>
+            tailwind.config = {
+                theme: {
+                fontSize: {
+                    h1: '3.815rem', 
+                    h2: '3.052rem', 
+                    h3: '2.441rem', 
+                    h4: '1.953rem', 
+                    h5: '1.563rem', 
+                    h6: '1.25rem', 
+                    p: '1rem', 
+                    sm1: '0.8rem', 
+                    sm2: '0.64rem', 
+                },
+                extend: {
+                    colors: {
+                    purple1: '#240046', 
+                    }
+                }
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <header class="h-auto w-full">
+            <nav class="navbar fixed z-50 drop-shadow-2xl bg-gradient-to-r p-3 h-[5vh] sm:h-[5rem] w-full flex items-center justify-between lg:justify-around from-purple-900 to-yellow-300">
+                <a href="/" class="group">
+                    <img src="https://dewey.tailorbrands.com/production/brand_version_mockup_image/707/9177902707_0e369c2b-b0bb-40c5-9978-ee529c1f9667.png?cb=1733262568" 
+                        class="w-[8vw] h-[8vh] object-contain transform group-hover:scale-90 transition ease-in-out duration-200"
+                    />
+                </a>
+                <div class="h-full w-auto hidden lg:flex flex-row items-center lg:justify-center space-x-5 text-gray-100">
+                    <a href="/">
+                        <button class="btn bg-inherit text-inherit text-h6 shadow-none rounded-none border-0 px-4 py-2 text-xl hover:border-b-2 border-gray-50 hover:border-gray-50 hover:bg-inherit">
+                            Inicio
+                        </button>
+                    </a>
+                    <a href="../../destinations/">
+                        <button class="btn bg-inherit text-inherit text-h6 shadow-none rounded-none border-0 px-4 py-2 text-xl hover:border-b-2 border-gray-50 hover:border-gray-50 hover:bg-inherit">
+                            Destinos
+                        </button>
+                    </a>
+                    <a href="../../reservations/">
+                        <button class="btn bg-inherit text-inherit text-h6 shadow-none rounded-none border-0 px-4 py-2 text-xl hover:border-b-2 border-gray-50 hover:border-gray-50 hover:bg-inherit">
+                            Reservar
+                        </button>
+                    </a>
+                </div>
+                <div class="flex flex-row w-auto lg:space-x-5 items-center justify-center">
+                    <form class="hidden md:flex">
+                        <input type="text" class="input input-bordered text-p lg:text-h6 input-warning w-[20vw]" placeholder="Buscar en Travelly..." />
+                    </form>
+                    <div tabindex="1" class="hidden w-full h-full lg:flex items-center justify-around dropdown dropdown-bottom dropdown-end">
+                        <div class="avatar">
+                            <div class="w-12 rounded-full ring ring-offset-2 ring-secondary ring-offset-base-100 overflow-hidden">
+                                <img src=" https://unavatar.io/x/kikobeats" />
+                            </div>
+                        </div>
+                        <ul
+                            tabindex="1"
+                            class="menu dropdown-content bg-purple1 bg-opacity-70 sm:bg-opacity-50 text-h6 text-gray-100 font-semibold rounded-box z-[1] mt-4 w-48 p-2 shadow">
+                            <li><a href="../../login/" class="hover:bg-purple-200 hover:text-gray-900">Cerrar Sesión</a></li>
+                        </ul>
+                    </div>
+                    <div class="dropdown dropdown-bottom dropdown-end">
+                        <div class="w-auto h-full text-neutral-900 transform scale-75 sm:scale-100 px-4 py-2 object-contain flex items-center justify-center lg:hidden">
+                            <button tabindex="0" class="btn btn-ghost w-auto h-auto">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="2.5rem" height="2.5rem" viewBox="0 0 24 24" class="w-full h-full">
+                                    <path fill="currentColor" d="M3 18v-2h18v2zm0-5v-2h18v2zm0-5V6h18v2z"/>
+                                </svg>
+                            </button>
+                        </div>
+                        <ul
+                            tabindex="0"
+                            class="menu dropdown-content bg-purple1 bg-opacity-70 sm:bg-opacity-50 text-h6 text-gray-100 font-semibold rounded-box z-[1] mt-4 w-48 p-2 shadow">
+                            <li><a href="/" class="hover:bg-purple-200 hover:text-gray-900">Inicio</a></li>
+                            <li><a href="../../destinations/" class="hover:bg-purple-200 hover:text-gray-900">Destinos</a></li>
+                            <li><a href="../../reservations/" class="hover:bg-purple-200 hover:text-gray-900">Reservar</a></li>
+                            <li><div class="divider"></div></li>
+                            <li><a href="../../login/" class="hover:bg-purple-200 hover:text-gray-900">Cerrar Sesión</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </header> 
+        <main class="h-auto py-5 bg-gradient-to-b from-purple-200 from-20% to-yellow-100">
+            <section class="w-full h-auto sm:py-10 flex flex-col lg:flex-row">
+                <div class="flex flex-col justify-center w-full lg:w-[100rem] p-10 space-y-5">
+                    <h3 class="text-h2 font-bold text-purple1">Tokio, Japón</h3>
+                    <div class="flex flex-row flex-wrap gap-2 text-h5 text-gray-900">
+                        <p class="badge text-inherit badge-outline badge-lg">Ciudad</p>
+                        <p class="badge text-inherit badge-outline badge-lg">Exótica</p>
+                        <p class="badge text-inherit badge-outline badge-lg">Tecnología</p>
+                    </div>
+                    <p class="text-p lg:text-h6 font-medium ">
+                        Tokio, la vibrante capital de Japón, combina a la perfección tradición y modernidad. Esta metrópolis global es conocida por sus rascacielos iluminados con neones, su tecnología avanzada y su rica cultura ancestral. Explora sus templos históricos como el Senso-ji, disfruta de una experiencia gastronómica única con sushi fresco y ramen auténtico, o piérdete en las calles de Akihabara, el paraíso de la tecnología y el anime.
+Si buscas un toque de naturaleza, pasea por los jardines de Shinjuku Gyoen o contempla el icónico Monte Fuji desde el mirador de la Torre de Tokio. Tokio también ofrece una vida nocturna vibrante en Shibuya y Shinjuku, donde la ciudad nunca duerme.
+Un destino perfecto para los amantes de la tecnología, la cultura y la gastronomía, ¡Tokio promete una experiencia inolvidable!
+                    </p>
+                    <button class="btn btn-lg btn-ghost glass text-h5 font-bold group flex items-center justify-center">
+                        <a href="../../reservations/" class="w-full h-full flex flex-row items-center justify-center">
+                            Empezar reserva 
+                            <svg xmlns="http://www.w3.org/2000/svg" width="3rem" height="3rem" viewBox="0 0 24 24" class="transform transition-all group-hover:translate-x-2 ease-in-out duratio-200">
+                                <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14m-6 6l6-6m-6-6l6 6"/>
+                            </svg>
+                        </a>
+                    </button>
+                </div>
+                <div class="carousel w-full h-auto flex items-center justify-center overflow-hidden">
+
+                    <!--/////////////////////////////////////////////// imagenes del carrusel ///////////////////////////////////////////////// -->
+
+                    <div id="img1" class="carousel-item relative h-auto md:w-full md:h-screen flex flex-row justify-around items-center overflow-hidden">
+                        <button class="btn btn-circle w-auto flex items-center justify-center bg-purple-900 hover:bg-purple-100 text-purple-100 hover:text-purple-900">
+                            <a href="#img3">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="3rem" height="3rem" viewBox="0 0 24 24">
+                                    <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14M5 12l6 6m-6-6l6-6"/>
+                                </svg>
+                            </a>
+                        </button>
+                        <div class="relative rounded-full overflow-hidden md:w-[35rem] md:h-[35rem] object-cover transform scale-50 md:scale-100">
+                            <img
+                                src="https://img.freepik.com/foto-gratis/usuarios-registrados-calle-comercial-osaka_1203-6198.jpg?t=st=1733302075~exp=1733305675~hmac=99f13b9156cd8d4f6fca8a6c29e93daabaf33515e44b9af576a741d752e9311a&w=996"
+                                class=" object-cover w-full h-full"
+                            />
+                        </div>
+                        <button class="btn btn-circle w-auto flex items-center justify-center bg-purple-900 hover:bg-purple-100 text-purple-100 hover:text-purple-900">
+                            <a href="#img2">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="3rem" height="3rem" viewBox="0 0 24 24">
+                                    <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14m-6 6l6-6m-6-6l6 6"/>
+                                </svg>
+                            </a>
+                        </button>
+                    </div>
+                    <div id="img2" class="carousel-item relative h-auto md:w-full md:h-screen flex flex-row justify-around items-center overflow-hidden">
+                        <button class="btn btn-circle w-auto flex items-center justify-center bg-purple-900 hover:bg-purple-100 text-purple-100 hover:text-purple-900">
+                            <a href="#img1">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="3rem" height="3rem" viewBox="0 0 24 24">
+                                    <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14M5 12l6 6m-6-6l6-6"/>
+                                </svg>
+                            </a>
+                        </button>
+                        <div class="relative rounded-full overflow-hidden w-[35rem] h-[35rem] object-cover transform scale-50 md:scale-100">
+                            <img
+                                src="https://img.freepik.com/foto-gratis/gente-caminando-calle-japon-noche_23-2148942945.jpg?t=st=1733306760~exp=1733310360~hmac=408dd3ed81604d3e47d6a124e909dfef41437fc9b63f75aecce8b354eecba04a&w=996"
+                                class=" object-cover w-full h-full"
+                            />
+                        </div>
+                        <button class="btn btn-circle w-auto flex items-center justify-center bg-purple-900 hover:bg-purple-100 text-purple-100 hover:text-purple-900">
+                            <a href="#img3">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="3rem" height="3rem" viewBox="0 0 24 24">
+                                    <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14m-6 6l6-6m-6-6l6 6"/>
+                                </svg>
+                            </a>
+                        </button>
+                    </div>
+                    <div id="img3" class="carousel-item relative h-auto md:w-full md:h-screen flex flex-row justify-around items-center overflow-hidden">
+                        <button class="btn btn-circle w-auto flex items-center justify-center bg-purple-900 hover:bg-purple-100 text-purple-100 hover:text-purple-900">
+                            <a href="#img2">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="3rem" height="3rem" viewBox="0 0 24 24">
+                                    <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14M5 12l6 6m-6-6l6-6"/>
+                                </svg>
+                            </a>
+                        </button>
+                        <div class="relative rounded-full overflow-hidden w-[35rem] h-[35rem] object-cover transform scale-50 md:scale-100">
+                            <img
+                                src="https://img.freepik.com/foto-gratis/paisaje-urbano-ciudad-asiatica_23-2148889519.jpg?t=st=1733307210~exp=1733310810~hmac=eba04d1e81351a2ba51a0d3c0c93f71e4a83a5eb6ef42db51d47dec485dd6bf3&w=996"
+                                class=" object-cover w-full h-full"
+                            />
+                        </div>
+                        <button class="btn btn-circle w-auto flex items-center justify-center bg-purple-900 hover:bg-purple-100 text-purple-100 hover:text-purple-900">
+                            <a href="#img1">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="3rem" height="3rem" viewBox="0 0 24 24">
+                                    <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14m-6 6l6-6m-6-6l6 6"/>
+                                </svg>
+                            </a>
+                        </button>
+                    </div>
+
+                    <!--/////////////////////////////////////////////// imagenes del carrusel ///////////////////////////////////////////////// -->
+
+                    </div>
+                </div>
+            </section>
+        </main>
+    </body>
+    <footer class="footer bg-gradient-to-b from-purple-800 shadow-2xl to-purple1 text-gray-100 p-10 flex flex-row flex-wrap justify-center">
+        <aside>
+          <img src="https://dewey.tailorbrands.com/production/brand_version_mockup_image/707/9177902707_0e369c2b-b0bb-40c5-9978-ee529c1f9667.png?cb=1733262568" 
+            class="w-[45vw] sm:w-[25vw] lg:w-[13vw] lg:h-[13vh] object-contain"
+          />
+          <p>
+            Hacemos cada viaje inolvidable 
+            <br />
+            © TravellyMX. All rights reserved by StellarDBryan. 
+          </p>
+        </aside>
+        <nav class="-space-y-1">
+          <h6 class="footer-title text-purple-100">Contacto</h6>
+          <p><strong>Dirección:</strong> 3701, Edificio 18B, Complejo Industrial las Américas, Chihuahua, Chih.</p>
+          <p><strong>Teléfono:</strong> +52 (614) 567-8901</p>
+          <p><strong>Email:</strong> contact@travelly.com</p>
+        </nav>
+        <nav>
+          <h6 class="footer-title text-purple-100">Links</h6>
+          <a href="../../destinations/" class="link link-hover">Destinos</a>
+          <a href="../../reservations/" class="link link-hover">Reservar</a>
+          <a href="/#Sales" class="link link-hover">Ofertas</a>
+          <a href="../../about/" class="link link-hover">Nosotros</a>
+        </nav>
+        <nav>
+          <h6 class="footer-title text-purple-100">Legal</h6>
+          <a href="#" class="link link-hover">Terminos y condiciones</a>
+          <a href="#" class="link link-hover">Política de Privacidad</a>
+          <a href="#" class="link link-hover">Uso de cookies</a>
+        </nav>
+        <nav class="flex flex-col items-center">
+            <h6 class="footer-title text-purple-100">Redes sociales</h6>
+            <div class="flex flex-row">
+                <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer">
+                    <button class="btn btn-ghost btn-circle hover:bg-purple-700 p-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="2rem" height="2rem" viewBox="0 0 24 24">
+                            <path fill="currentColor" 
+                                d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8 9.8V15H8v-3h2V9.5C10 7.57 11.57 6 13.5 6H16v3h-2c-.55 0-1 .45-1 1v2h3v3h-3v6.95c5.05-.5 9-4.76 9-9.95"/>
+                        </svg>
+                    </button>
+                </a>
+                <a href="https://x.com/BSigala16" target="_blank" rel="noopener noreferrer" >
+                    <button class="btn btn-ghost btn-circle hover:bg-purple-700">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="2rem" height="2rem" viewBox="0 0 24 24">
+                            <path fill="currentColor" 
+                                d="m17.687 3.063l-4.996 5.711l-4.32-5.711H2.112l7.477 9.776l-7.086 8.099h3.034l5.469-6.25l4.78 6.25h6.102l-7.794-10.304l6.625-7.571zm-1.064 16.06L5.654 4.782h1.803l10.846 14.34z"/>
+                        </svg>
+                    </button>
+                </a>
+                <a href="https://www.instagram.com/aaronsj16/profilecard/?igsh=a3Bnc2R3czA5MWM3" target="_blank" rel="noopener noreferrer" >
+                    <button class="btn btn-ghost btn-circle hover:bg-purple-700">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="2rem" height="2rem" viewBox="0 0 24 24">
+                            <path fill="currentColor" 
+                                d="M7.8 2h8.4C19.4 2 22 4.6 22 7.8v8.4a5.8 5.8 0 0 1-5.8 5.8H7.8C4.6 22 2 19.4 2 16.2V7.8A5.8 5.8 0 0 1 7.8 2m-.2 2A3.6 3.6 0 0 0 4 7.6v8.8C4 18.39 5.61 20 7.6 20h8.8a3.6 3.6 0 0 0 3.6-3.6V7.6C20 5.61 18.39 4 16.4 4zm9.65 1.5a1.25 1.25 0 0 1 1.25 1.25A1.25 1.25 0 0 1 17.25 8A1.25 1.25 0 0 1 16 6.75a1.25 1.25 0 0 1 1.25-1.25M12 7a5 5 0 0 1 5 5a5 5 0 0 1-5 5a5 5 0 0 1-5-5a5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3a3 3 0 0 0 3 3a3 3 0 0 0 3-3a3 3 0 0 0-3-3"/>
+                        </svg>
+                    </button>
+                </a>
+                <a href="https://www.linkedin.com/in/bryan-sigala/" target="_blank" rel="noopener noreferrer" >
+                    <button class="btn btn-ghost btn-circle hover:bg-purple-700">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="2rem" height="2rem" viewBox="0 0 24 24">
+                            <path fill="currentColor" 
+                                d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2zm-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93zM6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37z"/>
+                        </svg>
+                    </button>
+                </a>
+            </div>
+          </nav>
+    </footer>
+</html>
