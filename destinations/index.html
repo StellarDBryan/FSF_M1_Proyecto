@@ -1,11 +1,565 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    
-</body>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>TravellyMX</title>
+        <link rel="icon" type="image/png" sizes="16x16" href="https://dewey.tailorbrands.com/production/brand_version_mockup_image/707/9177902707_0e369c2b-b0bb-40c5-9978-ee529c1f9667.png?cb=1733262568">
+        <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.14/dist/full.min.css" rel="stylesheet" type="text/css" />
+        <script src="https://cdn.tailwindcss.com"></script>
+        <script>
+            tailwind.config = {
+                theme: {
+                fontSize: {
+                    h1: '3.815rem', 
+                    h2: '3.052rem', 
+                    h3: '2.441rem', 
+                    h4: '1.953rem', 
+                    h5: '1.563rem', 
+                    h6: '1.25rem', 
+                    p: '1rem', 
+                    sm1: '0.8rem', 
+                    sm2: '0.64rem', 
+                },
+                extend: {
+                    colors: {
+                    purple1: '#240046', 
+                    }
+                }
+                }
+            }
+            </script>
+    </head>
+    <body>
+        <header class="h-auto w-full">
+            <nav class="navbar fixed z-50 drop-shadow-2xl bg-gradient-to-r p-3 h-[5vh] sm:h-[5rem] w-full flex items-center justify-between lg:justify-around from-purple-900 to-yellow-300">
+                <a href="/index.html" class="group">
+                    <img src="https://dewey.tailorbrands.com/production/brand_version_mockup_image/707/9177902707_0e369c2b-b0bb-40c5-9978-ee529c1f9667.png?cb=1733262568" 
+                        class="w-[8vw] h-[8vh] object-contain transform group-hover:scale-90 transition ease-in-out duration-200"
+                    />
+                </a>
+                <div class="h-full w-auto hidden lg:flex flex-row items-center lg:justify-center space-x-5 text-gray-100">
+                    <a href="/index.html">
+                        <button class="btn bg-inherit text-inherit text-h6 shadow-none rounded-none border-0 px-4 py-2 text-xl hover:border-b-2 border-gray-50 hover:border-gray-50 hover:bg-inherit">
+                            Inicio
+                        </button>
+                    </a>
+                    <a href="/destinations/index.html">
+                        <button class="btn bg-inherit text-inherit text-h6 shadow-none rounded-none border-0 px-4 py-2 text-xl hover:border-b-2 border-gray-50 hover:border-gray-50 hover:bg-inherit">
+                            Destinos
+                        </button>
+                    </a>
+                    <a href="/reservations/index.html">
+                        <button class="btn bg-inherit text-inherit text-h6 shadow-none rounded-none border-0 px-4 py-2 text-xl hover:border-b-2 border-gray-50 hover:border-gray-50 hover:bg-inherit">
+                            Reservar
+                        </button>
+                    </a>
+                </div>
+                <div class="flex flex-row w-auto lg:space-x-5 items-center justify-center">
+                    <form class="hidden md:flex">
+                        <input type="text" class="input input-bordered text-p lg:text-h6 input-warning w-[20vw]" placeholder="Buscar en Travelly..." />
+                    </form>
+                    <div tabindex="1" class="hidden w-full h-full lg:flex items-center justify-around dropdown dropdown-bottom dropdown-end">
+                        <div class="avatar">
+                            <div class="w-12 rounded-full ring ring-offset-2 ring-secondary ring-offset-base-100 overflow-hidden">
+                                <img src=" https://unavatar.io/x/kikobeats" />
+                            </div>
+                        </div>
+                        <ul
+                            tabindex="1"
+                            class="menu dropdown-content bg-purple1 bg-opacity-70 sm:bg-opacity-50 text-h6 text-gray-100 font-semibold rounded-box z-[1] mt-4 w-48 p-2 shadow">
+                            <li><a href="/login.html" class="hover:bg-purple-200 hover:text-gray-900">Cerrar Sesión</a></li>
+                        </ul>
+                    </div>
+                    <div class="dropdown dropdown-bottom dropdown-end">
+                        <div class="w-auto h-full text-neutral-900 transform scale-75 sm:scale-100 px-4 py-2 object-contain flex items-center justify-center lg:hidden">
+                            <button tabindex="0" class="btn btn-ghost w-auto h-auto">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="2.5rem" height="2.5rem" viewBox="0 0 24 24" class="w-full h-full">
+                                    <path fill="currentColor" d="M3 18v-2h18v2zm0-5v-2h18v2zm0-5V6h18v2z"/>
+                                </svg>
+                            </button>
+                        </div>
+                        <ul
+                            tabindex="0"
+                            class="menu dropdown-content bg-purple1 bg-opacity-70 sm:bg-opacity-50 text-h6 text-gray-100 font-semibold rounded-box z-[1] mt-4 w-48 p-2 shadow">
+                            <li><a href="/index.html" class="hover:bg-purple-200 hover:text-gray-900">Inicio</a></li>
+                            <li><a href="/destinations/index.html" class="hover:bg-purple-200 hover:text-gray-900">Destinos</a></li>
+                            <li><a href="/reservations/index.html" class="hover:bg-purple-200 hover:text-gray-900">Reservar</a></li>
+                            <li><div class="divider"></div></li>
+                            <li><a href="/login.html" class="hover:bg-purple-200 hover:text-gray-900">Cerrar Sesión</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </header> 
+        <main class="py-5 pt-[9vh] sm:pt-[5rem] bg-gradient-to-r from-purple-200 to-yellow-100">
+            <div class="bg-gradient-to-r from-purple-900 to-yellow-300 items-center w-full h-[10vh] sm:h-auto py-5 px-4 flex flex-row space-x-1 sm:space-x-5">
+                <form class="flex flex-row space-x-3">
+                    <label class="input input-bordered flex items-center gap-2 text-p md:text-h6">
+                        <strong class="text-purple1 hidden md:inline">Buscar</strong>
+                        <input type="text" class="w-2/5 md:grow" placeholder="Encontrar destino..." />
+                    </label>
+                    <button type="submit" class="btn btn-ghost btn-circle text-gray-100 hover:text-purple1 hover:bg-purple-200">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="2.5em" height="2.5em" viewBox="0 0 24 24">
+                            <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" 
+                                d="m21 21l-4.343-4.343m0 0A8 8 0 1 0 5.343 5.343a8 8 0 0 0 11.314 11.314"/>
+                        </svg>
+                    </button> 
+                </form>
+                <h6 class="hidden sm:inline font-bold text-gray-100 text-p md:text-h6">Filtros</h6>
+                <div class="hidden lg:flex flex-row text-h6 text-gray-100 items-center dropdown dropdown-bottom dropdown-end space-x-5">
+                    <button tabindex="2" class="btn text-p btn-ghost glass rounded-full py-2 px-4 font-semibold">
+                        Ubic. Geog.
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                            <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="m6 13l6 6l6-6M6 5l6 6l6-6"/>
+                        </svg>
+                    </button>
+                    <ul
+                        tabindex="2"
+                        class="menu dropdown-content space-y-2 bg-gradient-to-b from-purple-900 to-yellow-300 text-p text-gray-100 font-medium rounded-box z-[1] mt-4 w-48 p-2 shadow">
+                        <li class="rounded-full bg-gray-900 bg-opacity-20 hover:bg-opacity-50">
+                            <label class="label cursor-pointer">
+                                <span class="">América</span>
+                                <input type="checkbox" class="checkbox border-2 border-gray-100 checkbox-warning" />
+                            </label>
+                        </li>
+                        <li class="rounded-full bg-gray-900 bg-opacity-20 hover:bg-opacity-50">
+                            <label class="label cursor-pointer">
+                                <span class="">Europa</span>
+                                <input type="checkbox" class="checkbox border-2 border-gray-100 checkbox-warning" />
+                            </label>
+                        </li>
+                        <li class="rounded-full bg-gray-900 bg-opacity-20 hover:bg-opacity-50">
+                            <label class="label cursor-pointer">
+                                <span class="">Asia</span>
+                                <input type="checkbox" class="checkbox border-2 border-gray-100 checkbox-warning" />
+                            </label>
+                        </li>
+                        <li class="rounded-full bg-gray-900 bg-opacity-20 hover:bg-opacity-50">
+                            <label class="label cursor-pointer">
+                                <span class="">Africa</span>
+                                <input type="checkbox" class="checkbox border-2 border-gray-100 checkbox-warning" />
+                            </label>
+                        </li>
+                        <li class="rounded-full bg-gray-900 bg-opacity-20 hover:bg-opacity-50">
+                            <label class="label cursor-pointer">
+                                <span class="">Oceania</span>
+                                <input type="checkbox" class="checkbox border-2 border-gray-100 checkbox-warning" />
+                            </label>
+                        </li>
+                    </ul>
+                </div>
+                <div class="hidden lg:flex flex-row text-h6 text-gray-100 items-center dropdown dropdown-bottom dropdown-end space-x-5">
+                    <button tabindex="3" class="btn text-p btn-ghost glass rounded-full py-2 px-4 font-semibold">
+                        Temporada
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                            <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="m6 13l6 6l6-6M6 5l6 6l6-6"/>
+                        </svg>
+                    </button>
+                    <ul
+                        tabindex="3"
+                        class="menu dropdown-content space-y-2 bg-gradient-to-b from-purple-900 to-yellow-300 text-p text-gray-100 font-medium rounded-box z-[1] mt-4 w-48 p-2 shadow">
+                        <li class="rounded-full bg-gray-900 bg-opacity-20 hover:bg-opacity-50">
+                            <label class="label cursor-pointer">
+                                <span class="">Invierno</span>
+                                <input type="checkbox" class="checkbox border-2 border-gray-100 checkbox-warning" />
+                            </label>
+                        </li>
+                        <li class="rounded-full bg-gray-900 bg-opacity-20 hover:bg-opacity-50">
+                            <label class="label cursor-pointer">
+                                <span class="">Primavera</span>
+                                <input type="checkbox" class="checkbox border-2 border-gray-100 checkbox-warning" />
+                            </label>
+                        </li>
+                        <li class="rounded-full bg-gray-900 bg-opacity-20 hover:bg-opacity-50">
+                            <label class="label cursor-pointer">
+                                <span class="">Verano</span>
+                                <input type="checkbox" class="checkbox border-2 border-gray-100 checkbox-warning" />
+                            </label>
+                        </li>
+                        <li class="rounded-full bg-gray-900 bg-opacity-20 hover:bg-opacity-50">
+                            <label class="label cursor-pointer">
+                                <span class="">Otoño</span>
+                                <input type="checkbox" class="checkbox border-2 border-gray-100 checkbox-warning" />
+                            </label>
+                        </li>
+                    </ul>
+                </div>
+                <div class="hidden lg:flex flex-row text-h6 text-gray-100 items-center dropdown dropdown-bottom dropdown-end space-x-5">
+                    <button tabindex="3" class="btn text-p btn-ghost glass rounded-full py-2 px-4 font-semibold">
+                        Tipo
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                            <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="m6 13l6 6l6-6M6 5l6 6l6-6"/>
+                        </svg>
+                    </button>
+                    <ul
+                        tabindex="3"
+                        class="menu dropdown-content space-y-2 bg-gradient-to-b from-purple-900 to-yellow-300 text-p text-gray-100 font-medium rounded-box z-[1] mt-4 w-48 p-2 shadow">
+                        <li class="rounded-full bg-gray-900 bg-opacity-20 hover:bg-opacity-50">
+                            <label class="label cursor-pointer">
+                                <span class="">Playa</span>
+                                <input type="checkbox" class="checkbox border-2 border-gray-100 checkbox-warning" />
+                            </label>
+                        </li>
+                        <li class="rounded-full bg-gray-900 bg-opacity-20 hover:bg-opacity-50">
+                            <label class="label cursor-pointer">
+                                <span class="">Montaña</span>
+                                <input type="checkbox" class="checkbox border-2 border-gray-100 checkbox-warning" />
+                            </label>
+                        </li>
+                        <li class="rounded-full bg-gray-900 bg-opacity-20 hover:bg-opacity-50">
+                            <label class="label cursor-pointer">
+                                <span class="">Ciudad</span>
+                                <input type="checkbox" class="checkbox border-2 border-gray-100 checkbox-warning" />
+                            </label>
+                        </li>
+                        <li class="rounded-full bg-gray-900 bg-opacity-20 hover:bg-opacity-50">
+                            <label class="label cursor-pointer">
+                                <span class="">Histórico</span>
+                                <input type="checkbox" class="checkbox border-2 border-gray-100 checkbox-warning" />
+                            </label>
+                        </li>
+                        <li class="rounded-full bg-gray-900 bg-opacity-20 hover:bg-opacity-50">
+                            <label class="label cursor-pointer">
+                                <span class="">Exótico</span>
+                                <input type="checkbox" class="checkbox border-2 border-gray-100 checkbox-warning" />
+                            </label>
+                        </li>
+                    </ul>
+                </div>
+                <div class="hidden lg:flex flex-row text-h6 text-gray-100 items-center dropdown dropdown-bottom dropdown-end space-x-5">
+                    <button tabindex="3" class="btn text-p btn-ghost glass rounded-full py-2 px-4 font-semibold">
+                        Actividades
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                            <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="m6 13l6 6l6-6M6 5l6 6l6-6"/>
+                        </svg>
+                    </button>
+                    <ul
+                        tabindex="3"
+                        class="menu dropdown-content space-y-2 bg-gradient-to-b from-purple-900 to-yellow-300 text-p text-gray-100 font-medium rounded-box z-[1] mt-4 w-48 p-2 shadow">
+                        <li class="rounded-full bg-gray-900 bg-opacity-20 hover:bg-opacity-50">
+                            <label class="label cursor-pointer">
+                                <span class="">Aventura</span>
+                                <input type="checkbox" class="checkbox border-2 border-gray-100 checkbox-warning" />
+                            </label>
+                        </li>
+                        <li class="rounded-full bg-gray-900 bg-opacity-20 hover:bg-opacity-50">
+                            <label class="label cursor-pointer">
+                                <span class="">Relax</span>
+                                <input type="checkbox" class="checkbox border-2 border-gray-100 checkbox-warning" />
+                            </label>
+                        </li>
+                        <li class="rounded-full bg-gray-900 bg-opacity-20 hover:bg-opacity-50">
+                            <label class="label cursor-pointer">
+                                <span class="">Cultura</span>
+                                <input type="checkbox" class="checkbox border-2 border-gray-100 checkbox-warning" />
+                            </label>
+                        </li>
+                        <li class="rounded-full bg-gray-900 bg-opacity-20 hover:bg-opacity-50">
+                            <label class="label cursor-pointer">
+                                <span class="">Naturaleza</span>
+                                <input type="checkbox" class="checkbox border-2 border-gray-100 checkbox-warning" />
+                            </label>
+                        </li>
+                        <li class="rounded-full bg-gray-900 bg-opacity-20 hover:bg-opacity-50">
+                            <label class="label cursor-pointer">
+                                <span class="">Vida Nocturna</span>
+                                <input type="checkbox" class="checkbox border-2 border-gray-100 checkbox-warning" />
+                            </label>
+                        </li>
+                    </ul>
+                </div>
+                <div class="lg:hidden flex flex-row text-p md:text-h6 text-gray-100 items-center dropdown dropdown-bottom dropdown-end space-x-5">
+                    <button tabindex="3" class="btn text-p btn-ghost glass rounded-full py-2 px-4 font-semibold">
+                        Filtros
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                            <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="m6 13l6 6l6-6M6 5l6 6l6-6"/>
+                        </svg>
+                    </button>
+                    <ul
+                        tabindex="3"
+                        class="menu overflow-auto dropdown-content space-y-2 bg-gradient-to-b from-purple-900 to-yellow-300 text-p text-gray-100 font-medium rounded-box z-[1] mt-4 w-48 p-2 shadow">
+                        <li class="rounded-full bg-gray-900 bg-opacity-20 hover:bg-opacity-50">
+                            <label class="label cursor-pointer">
+                                <span class="">Invierno</span>
+                                <input type="checkbox" class="checkbox border-2 border-gray-100 checkbox-warning" />
+                            </label>
+                        </li>
+                        <li class="rounded-full bg-gray-900 bg-opacity-20 hover:bg-opacity-50">
+                            <label class="label cursor-pointer">
+                                <span class="">Primavera</span>
+                                <input type="checkbox" class="checkbox border-2 border-gray-100 checkbox-warning" />
+                            </label>
+                        </li>
+                        <li class="rounded-full bg-gray-900 bg-opacity-20 hover:bg-opacity-50">
+                            <label class="label cursor-pointer">
+                                <span class="">Verano</span>
+                                <input type="checkbox" class="checkbox border-2 border-gray-100 checkbox-warning" />
+                            </label>
+                        </li>
+                        <li class="rounded-full bg-gray-900 bg-opacity-20 hover:bg-opacity-50">
+                            <label class="label cursor-pointer">
+                                <span class="">Otoño</span>
+                                <input type="checkbox" class="checkbox border-2 border-gray-100 checkbox-warning" />
+                            </label>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="flex flex-row flex-wrap justify-around md:gap-10 gap-y-10 w-full px-3 sm:px-10 py-5">
+
+                <!-- ///////////////////////////////////////////////// vista de cartas //////////////////////////////////////////////////////////////////////// -->
+
+                <div class="card relative drop-shadow-xl overflow-hidden rounded-2xl bg-inherit w-[40vw] h-[35vh] sm:w-[40vw] sm:h-[40vh] md:w-[30vw] md:h-[40vh] lg:w-[20vw] lg:h-[50vh] ">
+                    <a href="./destination.html" class="w-full h-full">
+                        <img src="https://img.freepik.com/foto-gratis/mujeres-viajando-paris_23-2149305859.jpg?t=st=1733291661~exp=1733295261~hmac=d2c03fb552dddb88d564bba02b34dd757a55bdadd267400d7f44107f07099526&w=996" 
+                            class="absolute -z-10 inset-0 w-full h-full object-cover" />
+                        <div class="bg-gradient-to-t from-purple1 to-transparent to-45% p-5 z-10 text-gray-100 w-full h-full flex flex-col space-y-2 justify-end">
+                            <h4 class="text-h6 sm:text-h5 font-bold">Paris, Francia</h4>
+                            <div class="hidden sm:flex flex-row flex-wrap space-x-2 gap-y-2">
+                                <div class="badge badge-outline lg:text-p">Ciudad</div>
+                                <div class="badge badge-outline lg:text-p">Cultura</div>
+                                <div class="badge badge-outline lg:text-p">Histórico</div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="card relative drop-shadow-xl overflow-hidden rounded-2xl bg-inherit w-[40vw] h-[35vh] sm:w-[40vw] sm:h-[40vh] md:w-[30vw] md:h-[40vh] lg:w-[20vw] lg:h-[50vh] ">
+                    <a href="./destination.html" class="w-full h-full">
+                        <img 
+                            src="https://img.freepik.com/foto-gratis/usuarios-registrados-calle-comercial-osaka_1203-6198.jpg?t=st=1733293611~exp=1733297211~hmac=c7ade512b50540f4fb5d66c8ee80de5de172afcf6b31fd402ac08902728f960c&w=996"
+                            class="absolute -z-10 inset-0 w-full h-full object-cover" />
+                        <div class="bg-gradient-to-t from-purple1 to-transparent to-45% p-5 z-10 text-gray-100 w-full h-full flex flex-col space-y-2 justify-end">
+                            <h4 class="text-h6 sm:text-h5 font-bold">Tokio, Japón</h4>
+                            <div class="hidden sm:flex flex-row flex-wrap space-x-2 gap-y-2">
+                                <div class="badge badge-outline lg:text-p">Ciudad</div>
+                                <div class="badge badge-outline lg:text-p">Exótico</div>
+                                <div class="badge badge-outline lg:text-p">Tecnología</div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="card relative drop-shadow-xl overflow-hidden rounded-2xl bg-inherit w-[40vw] h-[35vh] sm:w-[40vw] sm:h-[40vh] md:w-[30vw] md:h-[40vh] lg:w-[20vw] lg:h-[50vh] ">
+                    <a href="./destination.html" class="w-full h-full">
+                        <img 
+                            src="https://img.freepik.com/foto-gratis/manhattan-skyline_649448-1559.jpg?t=st=1733294338~exp=1733297938~hmac=2bdc43ca41f356d950dc60ab5275a1105ef556f9c317a1093f11eec01320b0cc&w=996"
+                            class="absolute -z-10 inset-0 w-full h-full object-cover" />
+                        <div class="bg-gradient-to-t from-purple1 to-transparent to-45% p-5 z-10 text-gray-100 w-full h-full flex flex-col space-y-2 justify-end">
+                            <h4 class="text-h6 sm:text-h5 font-bold">New York, USA</h4>
+                            <div class="hidden sm:flex flex-row flex-wrap space-x-2 gap-y-2">
+                                <div class="badge badge-outline lg:text-p">Ciudad</div>
+                                <div class="badge badge-outline lg:text-p">Vida Nocturna</div>
+                                <div class="badge badge-outline lg:text-p">Compras</div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="card relative drop-shadow-xl overflow-hidden rounded-2xl bg-inherit w-[40vw] h-[35vh] sm:w-[40vw] sm:h-[40vh] md:w-[30vw] md:h-[40vh] lg:w-[20vw] lg:h-[50vh] ">
+                    <a href="./destination.html" class="w-full h-full">
+                        <img 
+                            src="https://img.freepik.com/foto-gratis/templo-wat-arun-bangkok-tailandia_335224-972.jpg?t=st=1733294563~exp=1733298163~hmac=ce555d0f825343bb20870684691377106bc1318a11e0095dbb8a0f79ce7fd31d&w=996"
+                            class="absolute -z-10 inset-0 w-full h-full object-cover" />
+                        <div class="bg-gradient-to-t from-purple1 to-transparent to-45% p-5 z-10 text-gray-100 w-full h-full flex flex-col space-y-2 justify-end">
+                            <h4 class="text-h6 sm:text-h5 font-bold">Bangkok, Thailandia</h4>
+                            <div class="hidden sm:flex flex-row flex-wrap space-x-2 gap-y-2">
+                                <div class="badge badge-outline lg:text-p">Ciudad</div>
+                                <div class="badge badge-outline lg:text-p">Gastronomía</div>
+                                <div class="badge badge-outline lg:text-p">Vida Nocturna</div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="card relative drop-shadow-xl overflow-hidden rounded-2xl bg-inherit w-[40vw] h-[35vh] sm:w-[40vw] sm:h-[40vh] md:w-[30vw] md:h-[40vh] lg:w-[20vw] lg:h-[50vh] ">
+                    <a href="./destination.html" class="w-full h-full">
+                        <img src="https://img.freepik.com/foto-gratis/mujeres-viajando-paris_23-2149305859.jpg?t=st=1733291661~exp=1733295261~hmac=d2c03fb552dddb88d564bba02b34dd757a55bdadd267400d7f44107f07099526&w=996" 
+                            class="absolute -z-10 inset-0 w-full h-full object-cover" />
+                        <div class="bg-gradient-to-t from-purple1 to-transparent to-45% p-5 z-10 text-gray-100 w-full h-full flex flex-col space-y-2 justify-end">
+                            <h4 class="text-h6 sm:text-h5 font-bold">Paris, Francia</h4>
+                            <div class="hidden sm:flex flex-row flex-wrap space-x-2 gap-y-2">
+                                <div class="badge badge-outline lg:text-p">Ciudad</div>
+                                <div class="badge badge-outline lg:text-p">Cultura</div>
+                                <div class="badge badge-outline lg:text-p">Histórico</div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="card relative drop-shadow-xl overflow-hidden rounded-2xl bg-inherit w-[40vw] h-[35vh] sm:w-[40vw] sm:h-[40vh] md:w-[30vw] md:h-[40vh] lg:w-[20vw] lg:h-[50vh] ">
+                    <a href="./destination.html" class="w-full h-full">
+                        <img 
+                            src="https://img.freepik.com/foto-gratis/usuarios-registrados-calle-comercial-osaka_1203-6198.jpg?t=st=1733293611~exp=1733297211~hmac=c7ade512b50540f4fb5d66c8ee80de5de172afcf6b31fd402ac08902728f960c&w=996"
+                            class="absolute -z-10 inset-0 w-full h-full object-cover" />
+                        <div class="bg-gradient-to-t from-purple1 to-transparent to-45% p-5 z-10 text-gray-100 w-full h-full flex flex-col space-y-2 justify-end">
+                            <h4 class="text-h6 sm:text-h5 font-bold">Tokio, Japón</h4>
+                            <div class="hidden sm:flex flex-row flex-wrap space-x-2 gap-y-2">
+                                <div class="badge badge-outline lg:text-p">Ciudad</div>
+                                <div class="badge badge-outline lg:text-p">Exótico</div>
+                                <div class="badge badge-outline lg:text-p">Tecnología</div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="card relative drop-shadow-xl overflow-hidden rounded-2xl bg-inherit w-[40vw] h-[35vh] sm:w-[40vw] sm:h-[40vh] md:w-[30vw] md:h-[40vh] lg:w-[20vw] lg:h-[50vh] ">
+                    <a href="./destination.html" class="w-full h-full">
+                        <img 
+                            src="https://img.freepik.com/foto-gratis/manhattan-skyline_649448-1559.jpg?t=st=1733294338~exp=1733297938~hmac=2bdc43ca41f356d950dc60ab5275a1105ef556f9c317a1093f11eec01320b0cc&w=996"
+                            class="absolute -z-10 inset-0 w-full h-full object-cover" />
+                        <div class="bg-gradient-to-t from-purple1 to-transparent to-45% p-5 z-10 text-gray-100 w-full h-full flex flex-col space-y-2 justify-end">
+                            <h4 class="text-h6 sm:text-h5 font-bold">New York, USA</h4>
+                            <div class="hidden sm:flex flex-row flex-wrap space-x-2 gap-y-2">
+                                <div class="badge badge-outline lg:text-p">Ciudad</div>
+                                <div class="badge badge-outline lg:text-p">Vida Nocturna</div>
+                                <div class="badge badge-outline lg:text-p">Compras</div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="card relative drop-shadow-xl overflow-hidden rounded-2xl bg-inherit w-[40vw] h-[35vh] sm:w-[40vw] sm:h-[40vh] md:w-[30vw] md:h-[40vh] lg:w-[20vw] lg:h-[50vh] ">
+                    <a href="./destination.html" class="w-full h-full">
+                        <img 
+                            src="https://img.freepik.com/foto-gratis/templo-wat-arun-bangkok-tailandia_335224-972.jpg?t=st=1733294563~exp=1733298163~hmac=ce555d0f825343bb20870684691377106bc1318a11e0095dbb8a0f79ce7fd31d&w=996"
+                            class="absolute -z-10 inset-0 w-full h-full object-cover" />
+                        <div class="bg-gradient-to-t from-purple1 to-transparent to-45% p-5 z-10 text-gray-100 w-full h-full flex flex-col space-y-2 justify-end">
+                            <h4 class="text-h6 sm:text-h5 font-bold">Bangkok, Thailandia</h4>
+                            <div class="hidden sm:flex flex-row flex-wrap space-x-2 gap-y-2">
+                                <div class="badge badge-outline lg:text-p">Ciudad</div>
+                                <div class="badge badge-outline lg:text-p">Gastronomía</div>
+                                <div class="badge badge-outline lg:text-p">Vida Nocturna</div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="card relative drop-shadow-xl overflow-hidden rounded-2xl bg-inherit w-[40vw] h-[35vh] sm:w-[40vw] sm:h-[40vh] md:w-[30vw] md:h-[40vh] lg:w-[20vw] lg:h-[50vh] ">
+                    <a href="./destination.html" class="w-full h-full">
+                        <img src="https://img.freepik.com/foto-gratis/mujeres-viajando-paris_23-2149305859.jpg?t=st=1733291661~exp=1733295261~hmac=d2c03fb552dddb88d564bba02b34dd757a55bdadd267400d7f44107f07099526&w=996" 
+                            class="absolute -z-10 inset-0 w-full h-full object-cover" />
+                        <div class="bg-gradient-to-t from-purple1 to-transparent to-45% p-5 z-10 text-gray-100 w-full h-full flex flex-col space-y-2 justify-end">
+                            <h4 class="text-h6 sm:text-h5 font-bold">Paris, Francia</h4>
+                            <div class="hidden sm:flex flex-row flex-wrap space-x-2 gap-y-2">
+                                <div class="badge badge-outline lg:text-p">Ciudad</div>
+                                <div class="badge badge-outline lg:text-p">Cultura</div>
+                                <div class="badge badge-outline lg:text-p">Histórico</div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="card relative drop-shadow-xl overflow-hidden rounded-2xl bg-inherit w-[40vw] h-[35vh] sm:w-[40vw] sm:h-[40vh] md:w-[30vw] md:h-[40vh] lg:w-[20vw] lg:h-[50vh] ">
+                    <a href="./destination.html" class="w-full h-full">
+                        <img 
+                            src="https://img.freepik.com/foto-gratis/usuarios-registrados-calle-comercial-osaka_1203-6198.jpg?t=st=1733293611~exp=1733297211~hmac=c7ade512b50540f4fb5d66c8ee80de5de172afcf6b31fd402ac08902728f960c&w=996"
+                            class="absolute -z-10 inset-0 w-full h-full object-cover" />
+                        <div class="bg-gradient-to-t from-purple1 to-transparent to-45% p-5 z-10 text-gray-100 w-full h-full flex flex-col space-y-2 justify-end">
+                            <h4 class="text-h6 sm:text-h5 font-bold">Tokio, Japón</h4>
+                            <div class="hidden sm:flex flex-row flex-wrap space-x-2 gap-y-2">
+                                <div class="badge badge-outline lg:text-p">Ciudad</div>
+                                <div class="badge badge-outline lg:text-p">Exótico</div>
+                                <div class="badge badge-outline lg:text-p">Tecnología</div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="card relative drop-shadow-xl overflow-hidden rounded-2xl bg-inherit w-[40vw] h-[35vh] sm:w-[40vw] sm:h-[40vh] md:w-[30vw] md:h-[40vh] lg:w-[20vw] lg:h-[50vh] ">
+                    <a href="./destination.html" class="w-full h-full">
+                        <img 
+                            src="https://img.freepik.com/foto-gratis/manhattan-skyline_649448-1559.jpg?t=st=1733294338~exp=1733297938~hmac=2bdc43ca41f356d950dc60ab5275a1105ef556f9c317a1093f11eec01320b0cc&w=996"
+                            class="absolute -z-10 inset-0 w-full h-full object-cover" />
+                        <div class="bg-gradient-to-t from-purple1 to-transparent to-45% p-5 z-10 text-gray-100 w-full h-full flex flex-col space-y-2 justify-end">
+                            <h4 class="text-h6 sm:text-h5 font-bold">New York, USA</h4>
+                            <div class="hidden sm:flex flex-row flex-wrap space-x-2 gap-y-2">
+                                <div class="badge badge-outline lg:text-p">Ciudad</div>
+                                <div class="badge badge-outline lg:text-p">Vida Nocturna</div>
+                                <div class="badge badge-outline lg:text-p">Compras</div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="card relative drop-shadow-xl overflow-hidden rounded-2xl bg-inherit w-[40vw] h-[35vh] sm:w-[40vw] sm:h-[40vh] md:w-[30vw] md:h-[40vh] lg:w-[20vw] lg:h-[50vh] ">
+                    <a href="./destination.html" class="w-full h-full">
+                        <img 
+                            src="https://img.freepik.com/foto-gratis/templo-wat-arun-bangkok-tailandia_335224-972.jpg?t=st=1733294563~exp=1733298163~hmac=ce555d0f825343bb20870684691377106bc1318a11e0095dbb8a0f79ce7fd31d&w=996"
+                            class="absolute -z-10 inset-0 w-full h-full object-cover" />
+                        <div class="bg-gradient-to-t from-purple1 to-transparent to-45% p-5 z-10 text-gray-100 w-full h-full flex flex-col space-y-2 justify-end">
+                            <h4 class="text-h6 sm:text-h5 font-bold">Bangkok, Thailandia</h4>
+                            <div class="hidden sm:flex flex-row flex-wrap space-x-2 gap-y-2">
+                                <div class="badge badge-outline lg:text-p">Ciudad</div>
+                                <div class="badge badge-outline lg:text-p">Gastronomía</div>
+                                <div class="badge badge-outline lg:text-p">Vida Nocturna</div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                
+
+                <!-- ///////////////////////////////////////////////// vista de cartas //////////////////////////////////////////////////////////////////////// -->
+
+            </div>
+        </main>
+    </body>
+    <footer class="footer bg-gradient-to-b from-purple-800 shadow-2xl to-purple1 text-gray-100 p-10 flex flex-row flex-wrap justify-center">
+        <aside>
+          <img src="https://dewey.tailorbrands.com/production/brand_version_mockup_image/707/9177902707_0e369c2b-b0bb-40c5-9978-ee529c1f9667.png?cb=1733262568" 
+            class="w-[45vw] sm:w-[25vw] lg:w-[13vw] lg:h-[13vh] object-contain"
+          />
+          <p>
+            Hacemos cada viaje inolvidable 
+            <br />
+            © TravellyMX. All rights reserved by StellarDBryan. 
+          </p>
+        </aside>
+        <nav class="-space-y-1">
+          <h6 class="footer-title text-purple-100">Contacto</h6>
+          <p><strong>Dirección:</strong> 3701, Edificio 18B, Complejo Industrial las Américas, Chihuahua, Chih.</p>
+          <p><strong>Teléfono:</strong> +52 (614) 567-8901</p>
+          <p><strong>Email:</strong> contact@travelly.com</p>
+        </nav>
+        <nav>
+          <h6 class="footer-title text-purple-100">Links</h6>
+          <a href="/destinations/index.html" class="link link-hover">Destinos</a>
+          <a href="/reservations/index.html" class="link link-hover">Reservar</a>
+          <a href="/index.html#Sales" class="link link-hover">Ofertas</a>
+          <a href="/about/index.html" class="link link-hover">Nosotros</a>
+        </nav>
+        <nav>
+          <h6 class="footer-title text-purple-100">Legal</h6>
+          <a href="#" class="link link-hover">Terminos y condiciones</a>
+          <a href="#" class="link link-hover">Política de Privacidad</a>
+          <a href="#" class="link link-hover">Uso de cookies</a>
+        </nav>
+        <nav class="flex flex-col items-center">
+            <h6 class="footer-title text-purple-100">Redes sociales</h6>
+            <div class="flex flex-row">
+                <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer">
+                    <button class="btn btn-ghost btn-circle hover:bg-purple-700 p-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="2rem" height="2rem" viewBox="0 0 24 24">
+                            <path fill="currentColor" 
+                                d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8 9.8V15H8v-3h2V9.5C10 7.57 11.57 6 13.5 6H16v3h-2c-.55 0-1 .45-1 1v2h3v3h-3v6.95c5.05-.5 9-4.76 9-9.95"/>
+                        </svg>
+                    </button>
+                </a>
+                <a href="https://x.com/BSigala16" target="_blank" rel="noopener noreferrer" >
+                    <button class="btn btn-ghost btn-circle hover:bg-purple-700">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="2rem" height="2rem" viewBox="0 0 24 24">
+                            <path fill="currentColor" 
+                                d="m17.687 3.063l-4.996 5.711l-4.32-5.711H2.112l7.477 9.776l-7.086 8.099h3.034l5.469-6.25l4.78 6.25h6.102l-7.794-10.304l6.625-7.571zm-1.064 16.06L5.654 4.782h1.803l10.846 14.34z"/>
+                        </svg>
+                    </button>
+                </a>
+                <a href="https://www.instagram.com/aaronsj16/profilecard/?igsh=a3Bnc2R3czA5MWM3" target="_blank" rel="noopener noreferrer" >
+                    <button class="btn btn-ghost btn-circle hover:bg-purple-700">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="2rem" height="2rem" viewBox="0 0 24 24">
+                            <path fill="currentColor" 
+                                d="M7.8 2h8.4C19.4 2 22 4.6 22 7.8v8.4a5.8 5.8 0 0 1-5.8 5.8H7.8C4.6 22 2 19.4 2 16.2V7.8A5.8 5.8 0 0 1 7.8 2m-.2 2A3.6 3.6 0 0 0 4 7.6v8.8C4 18.39 5.61 20 7.6 20h8.8a3.6 3.6 0 0 0 3.6-3.6V7.6C20 5.61 18.39 4 16.4 4zm9.65 1.5a1.25 1.25 0 0 1 1.25 1.25A1.25 1.25 0 0 1 17.25 8A1.25 1.25 0 0 1 16 6.75a1.25 1.25 0 0 1 1.25-1.25M12 7a5 5 0 0 1 5 5a5 5 0 0 1-5 5a5 5 0 0 1-5-5a5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3a3 3 0 0 0 3 3a3 3 0 0 0 3-3a3 3 0 0 0-3-3"/>
+                        </svg>
+                    </button>
+                </a>
+                <a href="https://www.linkedin.com/in/bryan-sigala/" target="_blank" rel="noopener noreferrer" >
+                    <button class="btn btn-ghost btn-circle hover:bg-purple-700">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="2rem" height="2rem" viewBox="0 0 24 24">
+                            <path fill="currentColor" 
+                                d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2zm-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93zM6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37z"/>
+                        </svg>
+                    </button>
+                </a>
+            </div>
+          </nav>
+    </footer>
 </html>
