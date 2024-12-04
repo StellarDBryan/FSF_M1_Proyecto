@@ -1,11 +1,232 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    
-</body>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>TravellyMX</title>
+        <link rel="icon" type="image/png" sizes="16x16" href="https://dewey.tailorbrands.com/production/brand_version_mockup_image/707/9177902707_0e369c2b-b0bb-40c5-9978-ee529c1f9667.png?cb=1733262568">
+        <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.14/dist/full.min.css" rel="stylesheet" type="text/css" />
+        <script src="https://cdn.tailwindcss.com"></script>
+        <script>
+            tailwind.config = {
+                theme: {
+                fontSize: {
+                    h1: '3.815rem', 
+                    h2: '3.052rem', 
+                    h3: '2.441rem', 
+                    h4: '1.953rem', 
+                    h5: '1.563rem', 
+                    h6: '1.25rem', 
+                    p: '1rem', 
+                    sm1: '0.8rem', 
+                    sm2: '0.64rem', 
+                },
+                extend: {
+                    colors: {
+                    purple1: '#240046', 
+                    }
+                }
+                }
+            }
+            </script>
+    </head>
+    <body>
+        <header class="h-auto w-full">
+            <nav class="navbar fixed z-50 drop-shadow-2xl bg-gradient-to-r p-3 h-[5vh] sm:h-[5rem] w-full flex items-center justify-between lg:justify-around from-purple-900 to-yellow-300">
+                <a href="/" class="group">
+                    <img src="https://dewey.tailorbrands.com/production/brand_version_mockup_image/707/9177902707_0e369c2b-b0bb-40c5-9978-ee529c1f9667.png?cb=1733262568" 
+                        class="w-[8vw] h-[8vh] object-contain transform group-hover:scale-90 transition ease-in-out duration-200"
+                    />
+                </a>
+                <div class="h-full w-auto hidden lg:flex flex-row items-center lg:justify-center space-x-5 text-gray-100">
+                    <a href="/">
+                        <button class="btn bg-inherit text-inherit text-h6 shadow-none rounded-none border-0 px-4 py-2 text-xl hover:border-b-2 border-gray-50 hover:border-gray-50 hover:bg-inherit">
+                            Inicio
+                        </button>
+                    </a>
+                    <a href="../destinations/">
+                        <button class="btn bg-inherit text-inherit text-h6 shadow-none rounded-none border-0 px-4 py-2 text-xl hover:border-b-2 border-gray-50 hover:border-gray-50 hover:bg-inherit">
+                            Destinos
+                        </button>
+                    </a>
+                    <a href="../reservations/">
+                        <button class="btn bg-inherit text-inherit text-h6 shadow-none rounded-none border-0 px-4 py-2 text-xl hover:border-b-2 border-gray-50 hover:border-gray-50 hover:bg-inherit">
+                            Reservar
+                        </button>
+                    </a>
+                </div>
+                <div class="flex flex-row w-auto lg:space-x-5 items-center justify-center">
+                    <form class="hidden md:flex">
+                        <input type="text" class="input input-bordered text-p lg:text-h6 input-warning w-[20vw]" placeholder="Buscar en Travelly..." />
+                    </form>
+                    <div tabindex="1" class="hidden w-full h-full lg:flex items-center justify-around dropdown dropdown-bottom dropdown-end">
+                        <div class="avatar">
+                            <div class="w-12 rounded-full ring ring-offset-2 ring-secondary ring-offset-base-100 overflow-hidden">
+                                <img src=" https://unavatar.io/x/kikobeats" />
+                            </div>
+                        </div>
+                        <ul
+                            tabindex="1"
+                            class="menu dropdown-content bg-purple1 bg-opacity-70 sm:bg-opacity-50 text-h6 text-gray-100 font-semibold rounded-box z-[1] mt-4 w-48 p-2 shadow">
+                            <li><a href="../login/" class="hover:bg-purple-200 hover:text-gray-900">Cerrar Sesión</a></li>
+                        </ul>
+                    </div>
+                    <div class="dropdown dropdown-bottom dropdown-end">
+                        <div class="w-auto h-full text-neutral-900 transform scale-75 sm:scale-100 px-4 py-2 object-contain flex items-center justify-center lg:hidden">
+                            <button tabindex="0" class="btn btn-ghost w-auto h-auto">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="2.5rem" height="2.5rem" viewBox="0 0 24 24" class="w-full h-full">
+                                    <path fill="currentColor" d="M3 18v-2h18v2zm0-5v-2h18v2zm0-5V6h18v2z"/>
+                                </svg>
+                            </button>
+                        </div>
+                        <ul
+                            tabindex="0"
+                            class="menu dropdown-content bg-purple1 bg-opacity-70 sm:bg-opacity-50 text-h6 text-gray-100 font-semibold rounded-box z-[1] mt-4 w-48 p-2 shadow">
+                            <li><a href="/" class="hover:bg-purple-200 hover:text-gray-900">Inicio</a></li>
+                            <li><a href="../destinations/" class="hover:bg-purple-200 hover:text-gray-900">Destinos</a></li>
+                            <li><a href="../reservations/" class="hover:bg-purple-200 hover:text-gray-900">Reservar</a></li>
+                            <li><div class="divider"></div></li>
+                            <li><a href="../login/" class="hover:bg-purple-200 hover:text-gray-900">Cerrar Sesión</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <main class="h-auto w-full bg-gradient-to-b from-purple-100 to-yellow-100">
+            <div class="relative isolate overflow-hidden bg-gray-900 py-24 sm:py-32">
+                <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&crop=focalpoint&fp-y=.8&w=2830&h=1500&q=80&blend=111827&sat=-100&exp=15&blend-mode=multiply" alt="" class="absolute inset-0 -z-10 size-full object-cover object-right md:object-center">
+                <div class="hidden sm:absolute sm:-top-10 sm:right-1/2 sm:-z-10 sm:mr-10 sm:block sm:transform-gpu sm:blur-3xl" aria-hidden="true">
+                  <div class="aspect-[1097/845] w-[68.5625rem] bg-gradient-to-tr from-purple-300 to-yellow-300 opacity-20" style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)"></div>
+                </div>
+                <div class="absolute -top-52 left-1/2 -z-10 -translate-x-1/2 transform-gpu blur-3xl sm:top-[-28rem] sm:ml-16 sm:translate-x-0 sm:transform-gpu" aria-hidden="true">
+                  <div class="aspect-[1097/845] w-[68.5625rem] bg-gradient-to-tr from-purple-300 to-yellow-300 opacity-20" style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)"></div>
+                </div>
+                <div class="mx-auto max-w-7xl px-6 lg:px-8">
+                  <div class="mx-auto max-w-[80vw] lg:mx-0 flex flex-row flex-wrap justify-around gap-5">
+                    <div class="w-9/10 md:w-1/2 h-auto flex flex-col">
+                        <h2 class="text-h4 font-bold tracking-tight text-white sm:text-h2">¿Quiénes somos?</h2>
+                        <p class="mt-8 text-pretty text-lg md:font-medium text-gray-300 sm:text-xl/8">En Travelly, creemos que cada viaje cuenta una historia y estamos aquí para ayudarte a escribir la tuya. Somos una plataforma dedicada a conectar a los viajeros con experiencias únicas en destinos alrededor del mundo.
+                            Desde escapadas relajantes en playas paradisíacas hasta aventuras emocionantes en paisajes invernales, nuestra misión es hacer que explorar el mundo sea accesible, emocionante y sin complicaciones.
+                            Con un equipo apasionado por los viajes y la innovación, combinamos tecnología de vanguardia con un enfoque centrado en ti, para ofrecerte opciones personalizadas y las mejores ofertas. Queremos inspirarte a descubrir, soñar y viajar más allá de lo convencional.
+                            Viaja con Travelly. Tu próxima aventura comienza aquí.</p>
+                    </div>
+                    <img
+                        src="https://dewey.tailorbrands.com/production/brand_version_mockup_image/707/9177902707_0e369c2b-b0bb-40c5-9978-ee529c1f9667.png?cb=1733262568"
+                        class="object-contain w-[80vw] md:w-[25vw]"
+                    />
+                  </div>
+                  <div class="mx-auto mt-10 max-w-2xl lg:mx-0 lg:max-w-none">
+                    <div class="grid grid-cols-1 gap-x-8 gap-y-6 text-base/7 font-semibold text-white sm:grid-cols-2 md:flex lg:gap-x-10">
+                      <a href="#">Asociate con nosotros <span aria-hidden="true">&rarr;</span></a>
+                      <a href="#">Conoce a nuestro equipo <span aria-hidden="true">&rarr;</span></a>
+                    </div>
+                    <dl class="mt-16 grid grid-cols-1 gap-8 sm:mt-20 sm:grid-cols-2 lg:grid-cols-4">
+                      <div class="flex flex-col-reverse gap-1">
+                        <dt class="text-base/7 text-gray-300">Offices worldwide</dt>
+                        <dd class="text-4xl font-semibold tracking-tight text-white">12</dd>
+                      </div>
+                      <div class="flex flex-col-reverse gap-1">
+                        <dt class="text-base/7 text-gray-300">Full-time colleagues</dt>
+                        <dd class="text-4xl font-semibold tracking-tight text-white">300+</dd>
+                      </div>
+                      <div class="flex flex-col-reverse gap-1">
+                        <dt class="text-base/7 text-gray-300">Hours per week</dt>
+                        <dd class="text-4xl font-semibold tracking-tight text-white">40</dd>
+                      </div>
+                      <div class="flex flex-col-reverse gap-1">
+                        <dt class="text-base/7 text-gray-300">Paid time off</dt>
+                        <dd class="text-4xl font-semibold tracking-tight text-white">Unlimited</dd>
+                      </div>
+                    </dl>
+                  </div>
+                </div>
+              </div>
+              <div class="w-full flex flex-col p-10 items-center gap-5">
+                <div class="flex flex-col items-center ">
+                    <h6 class="text-h5 font-semibold ">
+                        Equipo de Travelly
+                    </h6>
+                    <p class="text-p font-medium text-center">
+                        ¡Conoce al equipo detras que hacen de Travelly una experiencia UNICA!
+                    </p>
+                </div>
+                <div class="avatar">
+                    <div class="w-[60vw] md:w-[20vw] rounded-full">
+                      <img src="https://unavatar.io/x/BSigala16" />
+                    </div>
+                  </div>
+                  <h6 class="text-h5 font-semibold ">
+                    CEO, Developer, Administrator, Conserje de Travelly
+                </h6>
+              </div>
+        </main>
+    </body>
+    <footer class="footer bg-gradient-to-b from-purple-800 shadow-2xl to-purple1 text-gray-100 p-10 flex flex-row flex-wrap justify-center">
+        <aside>
+          <img src="https://dewey.tailorbrands.com/production/brand_version_mockup_image/707/9177902707_0e369c2b-b0bb-40c5-9978-ee529c1f9667.png?cb=1733262568" 
+            class="w-[45vw] sm:w-[25vw] lg:w-[13vw] lg:h-[13vh] object-contain"
+          />
+          <p>
+            Hacemos cada viaje inolvidable 
+            <br />
+            © TravellyMX. All rights reserved by StellarDBryan. 
+          </p>
+        </aside>
+        <nav class="-space-y-1">
+          <h6 class="footer-title text-purple-100">Contacto</h6>
+          <p><strong>Dirección:</strong> 3701, Edificio 18B, Complejo Industrial las Américas, Chihuahua, Chih.</p>
+          <p><strong>Teléfono:</strong> +52 (614) 567-8901</p>
+          <p><strong>Email:</strong> contact@travelly.com</p>
+        </nav>
+        <nav>
+          <h6 class="footer-title text-purple-100">Links</h6>
+          <a href="../destinations/" class="link link-hover">Destinos</a>
+          <a href="../reservations/" class="link link-hover">Reservar</a>
+          <a href="/#Sales" class="link link-hover">Ofertas</a>
+          <a href="../about/" class="link link-hover">Nosotros</a>
+        </nav>
+        <nav>
+          <h6 class="footer-title text-purple-100">Legal</h6>
+          <a href="#" class="link link-hover">Terminos y condiciones</a>
+          <a href="#" class="link link-hover">Política de Privacidad</a>
+          <a href="#" class="link link-hover">Uso de cookies</a>
+        </nav>
+        <nav class="flex flex-col items-center">
+            <h6 class="footer-title text-purple-100">Redes sociales</h6>
+            <div class="flex flex-row">
+                <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer">
+                    <button class="btn btn-ghost btn-circle hover:bg-purple-700 p-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="2rem" height="2rem" viewBox="0 0 24 24">
+                            <path fill="currentColor" 
+                                d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8 9.8V15H8v-3h2V9.5C10 7.57 11.57 6 13.5 6H16v3h-2c-.55 0-1 .45-1 1v2h3v3h-3v6.95c5.05-.5 9-4.76 9-9.95"/>
+                        </svg>
+                    </button>
+                </a>
+                <a href="https://x.com/BSigala16" target="_blank" rel="noopener noreferrer" >
+                    <button class="btn btn-ghost btn-circle hover:bg-purple-700">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="2rem" height="2rem" viewBox="0 0 24 24">
+                            <path fill="currentColor" 
+                                d="m17.687 3.063l-4.996 5.711l-4.32-5.711H2.112l7.477 9.776l-7.086 8.099h3.034l5.469-6.25l4.78 6.25h6.102l-7.794-10.304l6.625-7.571zm-1.064 16.06L5.654 4.782h1.803l10.846 14.34z"/>
+                        </svg>
+                    </button>
+                </a>
+                <a href="https://www.instagram.com/aaronsj16/profilecard/?igsh=a3Bnc2R3czA5MWM3" target="_blank" rel="noopener noreferrer" >
+                    <button class="btn btn-ghost btn-circle hover:bg-purple-700">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="2rem" height="2rem" viewBox="0 0 24 24">
+                            <path fill="currentColor" 
+                                d="M7.8 2h8.4C19.4 2 22 4.6 22 7.8v8.4a5.8 5.8 0 0 1-5.8 5.8H7.8C4.6 22 2 19.4 2 16.2V7.8A5.8 5.8 0 0 1 7.8 2m-.2 2A3.6 3.6 0 0 0 4 7.6v8.8C4 18.39 5.61 20 7.6 20h8.8a3.6 3.6 0 0 0 3.6-3.6V7.6C20 5.61 18.39 4 16.4 4zm9.65 1.5a1.25 1.25 0 0 1 1.25 1.25A1.25 1.25 0 0 1 17.25 8A1.25 1.25 0 0 1 16 6.75a1.25 1.25 0 0 1 1.25-1.25M12 7a5 5 0 0 1 5 5a5 5 0 0 1-5 5a5 5 0 0 1-5-5a5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3a3 3 0 0 0 3 3a3 3 0 0 0 3-3a3 3 0 0 0-3-3"/>
+                        </svg>
+                    </button>
+                </a>
+                <a href="https://www.linkedin.com/in/bryan-sigala/" target="_blank" rel="noopener noreferrer" >
+                    <button class="btn btn-ghost btn-circle hover:bg-purple-700">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="2rem" height="2rem" viewBox="0 0 24 24">
+                            <path fill="currentColor" 
+                                d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2zm-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93zM6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37z"/>
+                        </svg>
+                    </button>
+                </a>
+            </div>
+          </nav>
+    </footer>
 </html>
