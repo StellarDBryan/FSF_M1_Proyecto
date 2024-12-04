@@ -92,8 +92,221 @@
                 </div>
             </nav>
         </header> 
-        <main class="h-[2000px]">
-
+        <main class="h-[2000px] pt-[9vh] sm:pt-[5rem] ">
+            <div class="bg-gradient-to-r from-purple-900 to-yellow-300 items-center w-full h-auto py-5 px-4 flex flex-row space-x-1 sm:space-x-5">
+                <form class="flex flex-row space-x-3">
+                    <label class="input input-bordered flex items-center gap-2 text-p md:text-h6">
+                        <strong class="text-purple1 hidden md:inline">Buscar</strong>
+                        <input type="text" class="w-2/5 md:grow" placeholder="Encontrar destino..." />
+                    </label>
+                    <button type="submit" class="btn btn-ghost btn-circle text-gray-100 hover:text-purple1 hover:bg-purple-200">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="2.5em" height="2.5em" viewBox="0 0 24 24">
+                            <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" 
+                                d="m21 21l-4.343-4.343m0 0A8 8 0 1 0 5.343 5.343a8 8 0 0 0 11.314 11.314"/>
+                        </svg>
+                    </button> 
+                </form>
+                <h6 class="hidden sm:inline font-bold text-gray-100 text-p md:text-h6">Filtros</h6>
+                <div class="hidden lg:flex flex-row text-h6 text-gray-100 items-center dropdown dropdown-bottom dropdown-end space-x-5">
+                    <button tabindex="2" class="btn text-p btn-ghost glass rounded-full py-2 px-4 font-semibold">
+                        Ubic. Geog.
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                            <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="m6 13l6 6l6-6M6 5l6 6l6-6"/>
+                        </svg>
+                    </button>
+                    <ul
+                        tabindex="2"
+                        class="menu dropdown-content space-y-2 bg-gradient-to-b from-purple-900 to-yellow-300 text-p text-gray-100 font-medium rounded-box z-[1] mt-4 w-48 p-2 shadow">
+                        <li class="rounded-full bg-gray-900 bg-opacity-20 hover:bg-opacity-50">
+                            <label class="label cursor-pointer">
+                                <span class="">América</span>
+                                <input type="checkbox" class="checkbox border-2 border-gray-100 checkbox-warning" />
+                            </label>
+                        </li>
+                        <li class="rounded-full bg-gray-900 bg-opacity-20 hover:bg-opacity-50">
+                            <label class="label cursor-pointer">
+                                <span class="">Europa</span>
+                                <input type="checkbox" class="checkbox border-2 border-gray-100 checkbox-warning" />
+                            </label>
+                        </li>
+                        <li class="rounded-full bg-gray-900 bg-opacity-20 hover:bg-opacity-50">
+                            <label class="label cursor-pointer">
+                                <span class="">Asia</span>
+                                <input type="checkbox" class="checkbox border-2 border-gray-100 checkbox-warning" />
+                            </label>
+                        </li>
+                        <li class="rounded-full bg-gray-900 bg-opacity-20 hover:bg-opacity-50">
+                            <label class="label cursor-pointer">
+                                <span class="">Africa</span>
+                                <input type="checkbox" class="checkbox border-2 border-gray-100 checkbox-warning" />
+                            </label>
+                        </li>
+                        <li class="rounded-full bg-gray-900 bg-opacity-20 hover:bg-opacity-50">
+                            <label class="label cursor-pointer">
+                                <span class="">Oceania</span>
+                                <input type="checkbox" class="checkbox border-2 border-gray-100 checkbox-warning" />
+                            </label>
+                        </li>
+                    </ul>
+                </div>
+                <div class="hidden lg:flex flex-row text-h6 text-gray-100 items-center dropdown dropdown-bottom dropdown-end space-x-5">
+                    <button tabindex="3" class="btn text-p btn-ghost glass rounded-full py-2 px-4 font-semibold">
+                        Temporada
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                            <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="m6 13l6 6l6-6M6 5l6 6l6-6"/>
+                        </svg>
+                    </button>
+                    <ul
+                        tabindex="3"
+                        class="menu dropdown-content space-y-2 bg-gradient-to-b from-purple-900 to-yellow-300 text-p text-gray-100 font-medium rounded-box z-[1] mt-4 w-48 p-2 shadow">
+                        <li class="rounded-full bg-gray-900 bg-opacity-20 hover:bg-opacity-50">
+                            <label class="label cursor-pointer">
+                                <span class="">Invierno</span>
+                                <input type="checkbox" class="checkbox border-2 border-gray-100 checkbox-warning" />
+                            </label>
+                        </li>
+                        <li class="rounded-full bg-gray-900 bg-opacity-20 hover:bg-opacity-50">
+                            <label class="label cursor-pointer">
+                                <span class="">Primavera</span>
+                                <input type="checkbox" class="checkbox border-2 border-gray-100 checkbox-warning" />
+                            </label>
+                        </li>
+                        <li class="rounded-full bg-gray-900 bg-opacity-20 hover:bg-opacity-50">
+                            <label class="label cursor-pointer">
+                                <span class="">Verano</span>
+                                <input type="checkbox" class="checkbox border-2 border-gray-100 checkbox-warning" />
+                            </label>
+                        </li>
+                        <li class="rounded-full bg-gray-900 bg-opacity-20 hover:bg-opacity-50">
+                            <label class="label cursor-pointer">
+                                <span class="">Otoño</span>
+                                <input type="checkbox" class="checkbox border-2 border-gray-100 checkbox-warning" />
+                            </label>
+                        </li>
+                    </ul>
+                </div>
+                <div class="hidden lg:flex flex-row text-h6 text-gray-100 items-center dropdown dropdown-bottom dropdown-end space-x-5">
+                    <button tabindex="3" class="btn text-p btn-ghost glass rounded-full py-2 px-4 font-semibold">
+                        Tipo
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                            <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="m6 13l6 6l6-6M6 5l6 6l6-6"/>
+                        </svg>
+                    </button>
+                    <ul
+                        tabindex="3"
+                        class="menu dropdown-content space-y-2 bg-gradient-to-b from-purple-900 to-yellow-300 text-p text-gray-100 font-medium rounded-box z-[1] mt-4 w-48 p-2 shadow">
+                        <li class="rounded-full bg-gray-900 bg-opacity-20 hover:bg-opacity-50">
+                            <label class="label cursor-pointer">
+                                <span class="">Playa</span>
+                                <input type="checkbox" class="checkbox border-2 border-gray-100 checkbox-warning" />
+                            </label>
+                        </li>
+                        <li class="rounded-full bg-gray-900 bg-opacity-20 hover:bg-opacity-50">
+                            <label class="label cursor-pointer">
+                                <span class="">Montaña</span>
+                                <input type="checkbox" class="checkbox border-2 border-gray-100 checkbox-warning" />
+                            </label>
+                        </li>
+                        <li class="rounded-full bg-gray-900 bg-opacity-20 hover:bg-opacity-50">
+                            <label class="label cursor-pointer">
+                                <span class="">Ciudad</span>
+                                <input type="checkbox" class="checkbox border-2 border-gray-100 checkbox-warning" />
+                            </label>
+                        </li>
+                        <li class="rounded-full bg-gray-900 bg-opacity-20 hover:bg-opacity-50">
+                            <label class="label cursor-pointer">
+                                <span class="">Histórico</span>
+                                <input type="checkbox" class="checkbox border-2 border-gray-100 checkbox-warning" />
+                            </label>
+                        </li>
+                        <li class="rounded-full bg-gray-900 bg-opacity-20 hover:bg-opacity-50">
+                            <label class="label cursor-pointer">
+                                <span class="">Exótico</span>
+                                <input type="checkbox" class="checkbox border-2 border-gray-100 checkbox-warning" />
+                            </label>
+                        </li>
+                    </ul>
+                </div>
+                <div class="hidden lg:flex flex-row text-h6 text-gray-100 items-center dropdown dropdown-bottom dropdown-end space-x-5">
+                    <button tabindex="3" class="btn text-p btn-ghost glass rounded-full py-2 px-4 font-semibold">
+                        Actividades
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                            <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="m6 13l6 6l6-6M6 5l6 6l6-6"/>
+                        </svg>
+                    </button>
+                    <ul
+                        tabindex="3"
+                        class="menu dropdown-content space-y-2 bg-gradient-to-b from-purple-900 to-yellow-300 text-p text-gray-100 font-medium rounded-box z-[1] mt-4 w-48 p-2 shadow">
+                        <li class="rounded-full bg-gray-900 bg-opacity-20 hover:bg-opacity-50">
+                            <label class="label cursor-pointer">
+                                <span class="">Aventura</span>
+                                <input type="checkbox" class="checkbox border-2 border-gray-100 checkbox-warning" />
+                            </label>
+                        </li>
+                        <li class="rounded-full bg-gray-900 bg-opacity-20 hover:bg-opacity-50">
+                            <label class="label cursor-pointer">
+                                <span class="">Relax</span>
+                                <input type="checkbox" class="checkbox border-2 border-gray-100 checkbox-warning" />
+                            </label>
+                        </li>
+                        <li class="rounded-full bg-gray-900 bg-opacity-20 hover:bg-opacity-50">
+                            <label class="label cursor-pointer">
+                                <span class="">Cultura</span>
+                                <input type="checkbox" class="checkbox border-2 border-gray-100 checkbox-warning" />
+                            </label>
+                        </li>
+                        <li class="rounded-full bg-gray-900 bg-opacity-20 hover:bg-opacity-50">
+                            <label class="label cursor-pointer">
+                                <span class="">Naturaleza</span>
+                                <input type="checkbox" class="checkbox border-2 border-gray-100 checkbox-warning" />
+                            </label>
+                        </li>
+                        <li class="rounded-full bg-gray-900 bg-opacity-20 hover:bg-opacity-50">
+                            <label class="label cursor-pointer">
+                                <span class="">Vida Nocturna</span>
+                                <input type="checkbox" class="checkbox border-2 border-gray-100 checkbox-warning" />
+                            </label>
+                        </li>
+                    </ul>
+                </div>
+                <div class="lg:hidden flex flex-row text-p md:text-h6 text-gray-100 items-center dropdown dropdown-bottom dropdown-end space-x-5">
+                    <button tabindex="3" class="btn text-p btn-ghost glass rounded-full py-2 px-4 font-semibold">
+                        Filtros
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                            <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="m6 13l6 6l6-6M6 5l6 6l6-6"/>
+                        </svg>
+                    </button>
+                    <ul
+                        tabindex="3"
+                        class="menu overflow-auto dropdown-content space-y-2 bg-gradient-to-b from-purple-900 to-yellow-300 text-p text-gray-100 font-medium rounded-box z-[1] mt-4 w-48 p-2 shadow">
+                        <li class="rounded-full bg-gray-900 bg-opacity-20 hover:bg-opacity-50">
+                            <label class="label cursor-pointer">
+                                <span class="">Invierno</span>
+                                <input type="checkbox" class="checkbox border-2 border-gray-100 checkbox-warning" />
+                            </label>
+                        </li>
+                        <li class="rounded-full bg-gray-900 bg-opacity-20 hover:bg-opacity-50">
+                            <label class="label cursor-pointer">
+                                <span class="">Primavera</span>
+                                <input type="checkbox" class="checkbox border-2 border-gray-100 checkbox-warning" />
+                            </label>
+                        </li>
+                        <li class="rounded-full bg-gray-900 bg-opacity-20 hover:bg-opacity-50">
+                            <label class="label cursor-pointer">
+                                <span class="">Verano</span>
+                                <input type="checkbox" class="checkbox border-2 border-gray-100 checkbox-warning" />
+                            </label>
+                        </li>
+                        <li class="rounded-full bg-gray-900 bg-opacity-20 hover:bg-opacity-50">
+                            <label class="label cursor-pointer">
+                                <span class="">Otoño</span>
+                                <input type="checkbox" class="checkbox border-2 border-gray-100 checkbox-warning" />
+                            </label>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
         </main>
     </body>
     <footer class="footer bg-gradient-to-b from-purple-800 shadow-2xl to-purple1 text-gray-100 p-10 flex flex-row flex-wrap justify-center">
