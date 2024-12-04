@@ -59,19 +59,35 @@
                     <form class="hidden md:flex">
                         <input type="text" class="input input-bordered text-p lg:text-h6 input-warning w-[20vw]" placeholder="Buscar en Travelly..." />
                     </form>
-                    <div class="hidden w-full h-full lg:flex items-center justify-around">
+                    <div tabindex="1" class="hidden w-full h-full lg:flex items-center justify-around dropdown dropdown-bottom dropdown-end">
                         <div class="avatar">
                             <div class="w-12 rounded-full ring ring-offset-2 ring-secondary ring-offset-base-100 overflow-hidden">
                                 <img src=" https://unavatar.io/x/kikobeats" />
                             </div>
                         </div>
+                        <ul
+                            tabindex="1"
+                            class="menu dropdown-content bg-purple1 bg-opacity-70 sm:bg-opacity-50 text-h6 text-gray-100 font-semibold rounded-box z-[1] mt-4 w-48 p-2 shadow">
+                            <li><a href="/login.html" class="hover:bg-purple-200 hover:text-gray-900">Cerrar Sesión</a></li>
+                        </ul>
                     </div>
-                    <div class="w-auto h-full text-neutral-900 transform scale-75 sm:scale-100 px-4 py-2 object-contain flex items-center justify-center lg:hidden">
-                        <button class="btn btn-ghost w-auto h-auto">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="2.5rem" height="2.5rem" viewBox="0 0 24 24" class="w-full h-full">
-                                <path fill="currentColor" d="M3 18v-2h18v2zm0-5v-2h18v2zm0-5V6h18v2z"/>
-                            </svg>
-                        </button>
+                    <div class="dropdown dropdown-bottom dropdown-end">
+                        <div class="w-auto h-full text-neutral-900 transform scale-75 sm:scale-100 px-4 py-2 object-contain flex items-center justify-center lg:hidden">
+                            <button tabindex="0" class="btn btn-ghost w-auto h-auto">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="2.5rem" height="2.5rem" viewBox="0 0 24 24" class="w-full h-full">
+                                    <path fill="currentColor" d="M3 18v-2h18v2zm0-5v-2h18v2zm0-5V6h18v2z"/>
+                                </svg>
+                            </button>
+                        </div>
+                        <ul
+                            tabindex="0"
+                            class="menu dropdown-content bg-purple1 bg-opacity-70 sm:bg-opacity-50 text-h6 text-gray-100 font-semibold rounded-box z-[1] mt-4 w-48 p-2 shadow">
+                            <li><a href="/index.html" class="hover:bg-purple-200 hover:text-gray-900">Inicio</a></li>
+                            <li><a href="/destinations/index.html" class="hover:bg-purple-200 hover:text-gray-900">Destinos</a></li>
+                            <li><a href="/reservations/index.html" class="hover:bg-purple-200 hover:text-gray-900">Reservar</a></li>
+                            <li><div class="divider"></div></li>
+                            <li><a href="/login.html" class="hover:bg-purple-200 hover:text-gray-900">Cerrar Sesión</a></li>
+                        </ul>
                     </div>
                 </div>
             </nav>
